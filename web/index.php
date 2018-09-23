@@ -1,8 +1,4 @@
 <?php
-
-  p
-    hpinfo();
-
 ?>
 <html>
     <head>
