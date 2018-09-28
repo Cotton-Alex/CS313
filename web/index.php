@@ -6,38 +6,39 @@ and open the template in the editor.
 -->
 <html lang="en">
     <head>
-        <?php include './mod/head.php'; ?>
+		<?php include './mod/head.php'; ?>
         <title>CS 313 - Alex Cotton</title>
     </head>
     <body>
         <header id="page_header">
-            <?php include './mod/header.php'; ?>
+			<?php include './mod/header.php'; ?>
         </header>
         <div class="container">
             <div class="row">
                 <div class="six columns">
                     <p></p>
-                    <p>Hello there, I'm Alex. I live in Southern California... not at 
-                        the beach though, I wish! I'm married to an amazing
-                        woman named Darcie and we have 4 fantastic kiddos;
-                        Ginger, Brigham, Hazel, 
-                        and Clementine. I have a Liberal Arts A.A. 
-                        from a local college out here and an A.S. in Film and 
-                        Video Production from an “accredited” school in Florida.
-                        I have way too many hobbies; board games, and rubik’s 
-                        cube are just a few on the more prominent ones. I’m 
-                        planning to use my bachelors degree to become a teacher.
-                        My wife is a teacher and I want to take summers off with
-                        her and the kids. I’m majoring in Web Development with a
-                        minor in Design. I currently work in the IT dept. of a 
-                        Native American tribe where I develop online training 
-                        modules for the employees. I'm slowly teaching myself 
-                        Swift on the side because I plan to develop iOS apps. I 
-                        have some experience with HTML and CSS outside of the 
-                        classroom, but I'm no pro. I'm here to learn. If I had 
-                        to decide, I'd say I'm currently better with design, but 
-                        I'm really trying to focus on improving my dev 
-                        skills.</p>
+                    <p id="intro">Hello, I'm Alex. I'm married and we have 4 fantastic 
+						kiddos; Ginger (12), Brigham (8), Hazel (6), and 
+						Clementine (23 months). I have an A.S. in Film and 
+						Video Production FullSail and I’m currently working 
+						on a bachelor's degree in Web Development with a minor 
+						in Design. I have way too many hobbies; board games 
+						and rubik’s cube are just a few on the more prominent 
+						ones. I used to  work at a video production company 
+						for about 10 years. I did a bit of everything there 
+						from lighting and camera work to editing shows, motion 
+						graphics, and special effects. I currently work for a 
+						Native American Tribe as an IT Trainer in the IT Dept. 
+						I create training materials for the staff about the 
+						proprietary software we use to manage the social 
+						services program we run. I’m planning to use my 
+						bachelors degree to become a teacher. My wife is a 
+						teacher and I want to take summers off with her and 
+						the kids. I’ve been getting really interested in 
+						mobile app development lately. It the little moments 
+						of free time I get, I’ve been working through some 
+						online courses on Swift and Xcode.
+					</p>
                     <p>~ Alex</p>
                 </div>
                 <div >
