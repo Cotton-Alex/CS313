@@ -1,4 +1,4 @@
-<!--<nav>
+<nav>
         <ul>
                     <li class="offset-by-ten"></li>
                 <li><a class="three columns" href='https://cotton-app.herokuapp.com/index.php'>Home</a></li>
@@ -6,10 +6,10 @@
                 <li><a class="three columns" href='https://cotton-app.herokuapp.com/wk02.php'>wk02</a></li>
                 <li><a class="two columns" href='https://cotton-app.herokuapp.com/w03/g08wk03_form.php'>wk03</a></li>
         </ul>
-</nav>-->
+</nav>
 
 
-<nav>
+<!--<nav>
     <ul>
         <li class="offset-by-ten"></li>
         <li><a class="three columns" href='http://localhost/cs313-php/web/index.php'>Home</a></li>
@@ -18,7 +18,7 @@
         <li><a class="two columns" href='http://localhost/cs313-php/web/w03/g08wk03_form.php'>wk03</a></li>
 
     </ul>
-</nav>
+</nav>-->
 
 
 <!--<li><a class="two columns" href='./about.php'>wk04</a></li>
