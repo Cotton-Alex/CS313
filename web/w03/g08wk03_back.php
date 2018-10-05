@@ -12,9 +12,9 @@
 
         <?php
 		// Stretch #2
-		$continent_codes = array("na" => "North America", "sa" => "South America", "eu" => "Europe", "as" => "Asia", "au" => "Australia", "af" => "Africa", "an" => "Antarctica", "none" => "You've been on an island your whole life!");
+		$continents = array("na" => "North America", "sa" => "South America", "eu" => "Europe", "as" => "Asia", "au" => "Australia", "af" => "Africa", "an" => "Antarctica", "none" => "You've been on an island your whole life!");
 		foreach ($continents as $continent) {
-			echo "<p>" . $continent_codes[$continent] . "</p>";
+			echo "<p>" . $continents[$continent] . "</p>";
 		}
 		?>
     </body>
