@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
-		<?php include $_SERVER['HTTP_HOST'] . "/mod/head.php"; ?>
+		<?php include "../mod/head.php"; ?>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>Group 08 Week 03</title>
     </head>
     <body>
         <header id="page_header">
 			<?php
-			include $_SERVER['HTTP_HOST'] . "/mod/header.php";
-			?>
+			include "../mod/header.php"; ?>
         </header>
         <br />
         <form action="g08wk03_back.php" method="post" id="form">

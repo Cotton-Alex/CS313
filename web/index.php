@@ -6,12 +6,12 @@ and open the template in the editor.
 -->
 <html lang="en">
     <head>
-		<?php include $_SERVER['HTTP_HOST'] . "/mod/head.php"; ?>
+		<?php include "mod/head.php"; ?>
         <title>CS 313 - Alex Cotton</title>
     </head>
     <body>
         <header id="page_header">
-			<?php include $_SERVER['HTTP_HOST'] . "/mod/header.php"; ?>
+			<?php include "mod/header.php"; ?>
         </header>
         <div class="container">
             <div class="row">
