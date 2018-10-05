@@ -5,7 +5,7 @@
 		<li><a class="three columns" href='https://cotton-app.herokuapp.com/wk01.php'>wk01</a></li>
 		<li><a class="three columns" href='https://cotton-app.herokuapp.com/wk02.php'>wk02</a></li>
 		<li><a class="two columns" href='https://cotton-app.herokuapp.com/w03/g08wk03_form.php'>wk03</a></li>
-			<li><a class="two columns" href='./about.php'>wk04</a></li>
+<!--			<li><a class="two columns" href='./about.php'>wk04</a></li>
 			<li><a class="two columns" href='./about.php'>wk05</a></li>
 			<li><a class="two columns" href='./about.php'>wk06</a></li>
 			<li><a class="two columns" href='./about.php'>wk07</a></li>
@@ -15,7 +15,7 @@
 			<li><a class="two columns" href='./about.php'>wk11</a></li>
 			<li><a class="two columns" href='./about.php'>wk12</a></li>
 			<li><a class="two columns" href='./about.php'>wk13</a></li>
-			<li><a class="two columns" href='./about.php'>wk14</a></li>
+			<li><a class="two columns" href='./about.php'>wk14</a></li>-->
 	</ul>
 </nav>
 
