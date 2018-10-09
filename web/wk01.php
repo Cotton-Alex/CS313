@@ -9,6 +9,8 @@
 		<header id="page_header">
             <?php include "mod/header.php"; ?>
         </header>
+		<div class="container">
         <div>Hello World!</div>
+		</div>
     </body>
 </html>

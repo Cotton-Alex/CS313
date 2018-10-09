@@ -2,7 +2,7 @@
 <head>
     <?php include "../mod/head.php"; ?>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Group 08 Week 03</title>
+    <title>Cart</title>
 </head>
 <body>
     <header id="page_header">
@@ -13,22 +13,6 @@
     <p>Email: <a href="<?php echo "mailto:" . filter_input(INPUT_POST, "email", FILTER_SANITIZE_EMAIL) ?>"><?php echo filter_input(INPUT_POST, "email", FILTER_SANITIZE_EMAIL) ?></a></p>
     <p>Major: <?php echo filter_input(INPUT_POST, "major", FILTER_SANITIZE_STRING) ?><br></p>
     <p>Continents Visited:<br>
-    <?php
-//    $continent_codes = array(
-//        "na" => "North America",
-//        "sa" => "South America",
-//        "eu" => "Europe",
-//        "as" => "Asia",
-//        "au" => "Australia",
-//        "af" => "Africa",
-//        "an" => "Antarctica",
-//        "none" => "Traveling is ovrerated.");
-//
-//    foreach ($continent as $continent_code => $continents) {
-//        echo "<p>" . "{$code} => {$continent}" . "</p>";
-//        echo $code;
-//    }
-    ?>
 
     <?php
     if (isset($_POST['submit'])) {//to run PHP script on submit
@@ -39,7 +23,7 @@
             }
         }
     }
-    ?>
+	?>
     </p>
 
     <p>Comments: <?php echo filter_input(INPUT_POST, "comments", FILTER_SANITIZE_STRING) ?></p>

@@ -1,18 +1,14 @@
-<?php ?>
+<!DOCTYPE html>
 <html>
     <head>
         <title>cs313</title>
 		<?php include "mod/head.php"; ?>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body onload="checkLocalStorage()">
 		<header id="page_header">
 			<?php include "mod/header.php"; ?>
         </header>
-
-
-		<br>
+		<div class="container">
 		<div id="clickMeButton">
 			<button onclick="clickAlert()">Click Me!!!</button> 
 		</div>
@@ -51,6 +47,7 @@
 			<br>
 			<span><button class="colorSave" id="saveColor" type="submit" onClick="setColor()">Save</button></span>
 			<button class="colorClear" id="resetColor" type="submit" onClick="resetColor()">Reset</button>
+		</div>
 		</div>
     </body>
 </html>
