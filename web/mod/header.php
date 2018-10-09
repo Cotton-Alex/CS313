@@ -5,7 +5,7 @@
                 <li><a class="one columns" href='https://cotton-app.herokuapp.com/wk01.php'>wk01</a></li>
                 <li><a class="one columns" href='https://cotton-app.herokuapp.com/wk02.php'>wk02</a></li>
                 <li><a class="one columns" href='https://cotton-app.herokuapp.com/w03/g08wk03_form.php'>wk03</a></li>
-				<li><a class="one columns" href='https://cotton-app.herokuapp.com/w04/products_form.php'>wk04</a></li>
+				<li><a class="one columns" href='https://cotton-app.herokuapp.com/w04/products.php'>wk04</a></li>
         </ul>
 </nav>
 
