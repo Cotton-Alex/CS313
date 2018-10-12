@@ -1,59 +1,119 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
-		<title>Products</title>
-		<?php include "../mod/head.php"; ?>
+        <title>Burley Bob's Big Board Game Blowout!</title>
+        <?php include "../mod/head.php"; ?>
     </head>
     <body>
         <header id="page_header">
-			<?php include "../mod/header.php"; ?>
+            <?php include "../mod/header.php"; ?>
         </header>
-		<div class="container">
-			<form action="cart.php" method="post" id="form">
-				<fieldset>
-					<legend>BYU Flat-Earthers Club Enrollment Questionairre</legend>
-					<br />
-					<label>Name:</label>
-					<input type="text" name="name"></input><br />
+        <div class="container">
+            <?php
+            session_start();
+            
+            
+              $url = 'cart.php';
+#cart.php - A simple shopping cart with add to cart, and remove links
+//---------------------------
+//initialize sessions
+//Define the products and cost
+            $product_image = array("<img src='https://cf.geekdo-images.com/small/img/rQjxEM5tXcxTEpZOP2sWh6lfrKc=/fit-in/200x150/pic3283110.png'>", "<img src='https://cf.geekdo-images.com/small/img/vUgVFW2ZjbqzxFozyqjMq8ITU4c=/fit-in/200x150/pic2630294.png'>", "<img src='https://cf.geekdo-images.com/small/img/8tpGZcSivddqAD3JHZzsqh47Rbw=/fit-in/200x150/pic4122337.jpg'>", "<img src='https://cf.geekdo-images.com/small/img/cO-X3SmPeGLkirB1fcLxKgGCxeI=/fit-in/200x150/pic3355171.jpg'>");
+            $games = array("Santorini", "Potion Explosion", "Go Cuckoo", "Rhino Hero: Super Battle");
+            $amounts = array("28.99", "30.49", "19.99", "33.33");
 
-					<label>Email: </label>
-					<input type="text" name="email"></input><br />
+//Load up session
+            if (!isset($_SESSION["total"])) {
+                $_SESSION["total"] = 0;
+                for ($i = 0; $i < count($games); $i++) {
+                    $_SESSION["qty"][$i] = 0;
+                    $_SESSION["amounts"][$i] = 0;
+                }
+            }
 
-					<p>Major:<br></br>
-						<?php
-						$procuct_radio_id = "major-";
-						$major_radio_abbr = array("cs", "wdd", "cit", "ce");
-						$major_radio_fullname = array("Computer Science", "Web Design and Development", "Computer Information Technology", "Computer Engineering");
+//---------------------------
+//Reset
+            if (isset($_GET['reset'])) {
+                if ($_GET["reset"] == 'true') {
+                    unset($_SESSION["qty"]); //The quantity for each product
+                    unset($_SESSION["amounts"]); //The amount from each product
+                    unset($_SESSION["total"]); //The total cost
+                    unset($_SESSION["cart"]); //Which item has been chosen
+                }
+            }
 
-						for ($i = 0; $i < sizeof($major_radio_fullname); $i++) {
-							echo "<input id=" . $major_radio_id . $major_radio_abbr[$i] . " type='radio' name='major' value='" . $major_radio_fullname[$i] . "' required>";
-							echo "<label for=" . $major_radio_id . $major_radio_abbr[$i] . ">" . $major_radio_fullname[$i] . "</label><br></br>";
-						}
-						?>
-					</p>
-					<p>
-						<label>Continents Visited:</label><br>
-							<input type="checkbox" name="continent[]" value="North America"> North America</input><br>
-							<input type="checkbox" name="continent[]" value="South America"> South America</input><br>
-							<input type="checkbox" name="continent[]" value="Europe"> Europe</input><br>
-							<input type="checkbox" name="continent[]" value="Asia"> Asia</input><br>
-							<input type="checkbox" name="continent[]" value="Australia"> Australia</input><br>
-							<input type="checkbox" name="continent[]" value="Africa"> Africa</input><br>
-							<input type="checkbox" name="continent[]" value="Antarctica"> Antarctica</input>
-					</p>
+//---------------------------
+//Add
+            if (isset($_GET["add"])) {
+                $i = $_GET["add"];
+                $qty = $_SESSION["qty"][$i] + 1;
+                $_SESSION["amounts"][$i] = $amounts[$i] * $qty;
+                $_SESSION["cart"][$i] = $i;
+                $_SESSION["qty"][$i] = $qty;
+                header("Location: $url");
+            }
 
-					<p>
-						<label>Comments: </label><br>
-							<textarea form="form" name="comments"></textarea><br>
-					</p>
-
-
-					<p>
-						<input type="submit" name="submit" value="Submit">
-					</p>
-
-					</fieldset>
-			</form>
-		</div>
-	</body>
+//---------------------------
+//Delete
+            if (isset($_GET["delete"])) {
+                $i = $_GET["delete"];
+                $qty = $_SESSION["qty"][$i];
+                $qty--;
+                $_SESSION["qty"][$i] = $qty;
+                //remove item if quantity is zero
+                if ($qty == 0) {
+                    $_SESSION["amounts"][$i] = 0;
+                    unset($_SESSION["cart"][$i]);
+                } else {
+                    $_SESSION["amounts"][$i] = $amounts[$i] * $qty;
+                }
+            }
+            ?>
+            <h2>Burley Bob's Big Board Game Blowout!</h2>
+            <table>
+                <tr>
+                    <th>Product Image</th>
+                    <th width="10px">&nbsp;</th>
+                    <th>Games</th>
+                    <th width="10px">&nbsp;</th>
+                    <th>Amount</th>
+                    <th width="10px">&nbsp;</th>
+                    <th>Action</th>
+                </tr>
+                <?php
+                for ($i = 0; $i < count($games); $i++) {
+                    ?>
+                    <tr>
+                        <td><?php echo($product_image[$i]); ?></td>
+                        <td width="10px">&nbsp;</td>
+                        <td><?php echo($games[$i]); ?></td>
+                        <td width="10px">&nbsp;</td>
+                        <td><?php echo($amounts[$i]); ?></td>
+                        <td width="10px">&nbsp;</td>
+                        <td><a href="?add=<?php echo($i); ?>">Add to cart</a></td>
+                    </tr>
+                    <?php
+                }
+                ?>
+                <tr>
+                    <td colspan="5"></td>
+                </tr>
+                <tr>
+                    <td colspan="5"><a href="cart.php">Reset Cart</a></td>
+                </tr>
+            </table>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            </form>
+        </div>
+    </body>
 </html>
