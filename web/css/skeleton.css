@@ -30,7 +30,6 @@
 .addRemove {
 	padding-top: 7px;
 }
-
 /* Grid
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .container {
@@ -375,7 +374,7 @@ form {
   box-sizing: border-box; }
 .u-pull-right {
   float: right; }
-.u-pull-left {
+.  {
   float: left; }
 
 

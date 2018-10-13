@@ -13,30 +13,16 @@
 			<?php include "../mod/header.php"; ?>
         </header>
         <div class="container">
-			<?php
-			if (isset($_SESSION["cart"])) {
-				?>
 				<br/>
 				<h2>Burley Bob's Big Board Game Checkout!</h2>
 				
 				<div>
-				<label>First Name:</label>
-				<input type="text" name="first_name"></input><br />
-
-				<label>Last Name:</label>
-				<input type="text" name="last_name"></input><br />
-				
-				<label>Street Address:</label>
-				<input type="text" name="street_address"></input><br />
-
-				<label>City:</label>
-				<input type="text" name="city"></input><br />
-				
-				<label>State:</label>
-				<input type="text" name="state"></input><br />
- 
-				<label>Zip:</label>
-				<input type="text" name="zip"></input><br />
+				<p><?php echo filter_input(INPUT_POST, "first_name", FILTER_SANITIZE_STRING); ?></p>
+				<p><?php echo filter_input(INPUT_POST, "last_name", FILTER_SANITIZE_STRING); ?></p>
+				<p><?php echo filter_input(INPUT_POST, "street_address", FILTER_SANITIZE_STRING); ?></p>
+				<p><?php echo filter_input(INPUT_POST, "city", FILTER_SANITIZE_STRING); ?></p>
+				<p><?php echo filter_input(INPUT_POST, "state", FILTER_SANITIZE_STRING); ?></p>
+				<p><?php echo filter_input(INPUT_POST, "zip", FILTER_SANITIZE_STRING); ?></p>
 
 				<table>
 					<tr>
@@ -71,11 +57,7 @@
 					?>
 				</table>
 				<p class="offset-by-seven two columns" >Total : <?php echo($total); ?></p>
-				<a class="button offset-by-one-third three columns" href="cart.php">Back to Cart</a>
-				<a class="button offset-by-one-thirds two columns" href="order.php">Order</a>
-				<?php
-			}
-			?>
+            </form>
         </div>
     </body>
 </html>
