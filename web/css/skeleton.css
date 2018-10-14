@@ -357,7 +357,9 @@ dl,
 figure,
 table,
 p,
-ul,
+ul{
+  margin-top: 0;
+  margin-bottom: 0; }
 ol,
 form {
   margin-top: 2.5rem;
