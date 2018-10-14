@@ -13,17 +13,18 @@
 			<?php include "../mod/header.php"; ?>
         </header>
         <div class="container">
-				<br/>
-				<h2>Burley Bob's Big Board Game Checkout!</h2>
-				
+			<br/>
+			<h2>Burley Bob's Big Board Game Order!</h2>
+			<div>
+				<p class="offset-by-three columns">Ship to:</p>
 				<div>
-				<p><?php echo filter_input(INPUT_POST, "first_name", FILTER_SANITIZE_STRING); ?></p>
-				<p><?php echo filter_input(INPUT_POST, "last_name", FILTER_SANITIZE_STRING); ?></p>
-				<p><?php echo filter_input(INPUT_POST, "street_address", FILTER_SANITIZE_STRING); ?></p>
-				<p><?php echo filter_input(INPUT_POST, "city", FILTER_SANITIZE_STRING); ?></p>
-				<p><?php echo filter_input(INPUT_POST, "state", FILTER_SANITIZE_STRING); ?></p>
-				<p><?php echo filter_input(INPUT_POST, "zip", FILTER_SANITIZE_STRING); ?></p>
-
+					<div class="offset-by-three columns"><?php echo filter_input(INPUT_POST, "first_name", FILTER_SANITIZE_STRING); ?>
+						<?php echo filter_input(INPUT_POST, "last_name", FILTER_SANITIZE_STRING); ?></div>
+					<div class="offset-by-three columns"><?php echo filter_input(INPUT_POST, "street_address", FILTER_SANITIZE_STRING); ?></div>
+					<div class="offset-by-three columns"><?php echo filter_input(INPUT_POST, "city", FILTER_SANITIZE_STRING); ?>
+						<?php echo filter_input(INPUT_POST, "state", FILTER_SANITIZE_STRING); ?>
+						<?php echo filter_input(INPUT_POST, "zip", FILTER_SANITIZE_STRING); ?><br> <br /></div>
+				</div>
 				<table>
 					<tr>
 						<th>Product</th>
@@ -57,7 +58,7 @@
 					?>
 				</table>
 				<p class="offset-by-seven two columns" >Total : <?php echo($total); ?></p>
-            </form>
-        </div>
+				</form>
+			</div>
     </body>
 </html>
