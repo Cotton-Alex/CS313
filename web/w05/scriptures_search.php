@@ -38,7 +38,7 @@
 				} else {
 
 					foreach ($db->query('select * from w05_grp_scripture') as $row) {
-						echo "<a href='scripturedisplay.php?id=" . $row["scripture_id"] . "'><span class='bold'>" . $row['book_name'] . " " . $row['chapter'] . ":" . $row['verse'] . "</span>";
+						echo "<a href='scriptures.php?id=" . $row["scripture_id"] . "'><span class='bold'>" . $row['book_name'] . " " . $row['chapter'] . ":" . $row['verse'] . "</span>";
 						echo '</a><br>';
 					}
 				}
