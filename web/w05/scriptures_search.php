@@ -49,7 +49,7 @@
 			?>
 
 			<div>
-				<form action="scripture_search.php" method="post">
+				<form action="scriptures_search.php" method="post">
 					<label>Book</label>
 					<input type="text" name="book" placeholder="John">
 						<button type="submit">Click Me</button>
