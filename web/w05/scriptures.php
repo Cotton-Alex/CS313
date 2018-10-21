@@ -46,7 +46,7 @@
                         ON w05_grp_scripture.book_name = w05_grp_book.book_id
                         INNER JOIN w05_grp_volume
                         ON w05_grp_scripture.volume_name = w05_grp_volume.volume_id
-                        WHERE scripture_id = " . htmlspecialchars($_GET['w05_grp_scripture.scripture_id']) . "") as $row) {
+                        WHERE w05_grp_scripture.scripture_id = " . htmlspecialchars($_GET['id']) . "") as $row) {
                     echo "<p><span class='bold'>" . $row['volume_name'] . " ~~~~ " . $row['book_name'] . " " . $row['chapter'] . ":" . $row['verse'] . " - </span>";
                     echo '"' . $row["content"] . '"</p>';
                 }
