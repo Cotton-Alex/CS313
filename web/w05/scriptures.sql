@@ -126,7 +126,7 @@ INSERT INTO w05_grp_scripture
 
 SELECT * FROM w05_grp_volume;
 SELECT * FROM w05_grp_book;
-SELECT * FROM w05_grp_scripture;
+SELECT * FROM w05_grp_scripture WHERE book_name = 2;
 SELECT * FROM w05_grp_volume;
 
 SELECT *
@@ -146,3 +146,11 @@ INNER JOIN w05_grp_book
 ON w05_grp_scripture.book_name = w05_grp_book.book_id
 INNER JOIN w05_grp_volume
 ON w05_grp_scripture.volume_name = w05_grp_volume.volume_id;
+
+SELECT w05_grp_volume.volume_name, w05_grp_book.book_name, w05_grp_scripture.chapter, w05_grp_scripture.verse, w05_grp_scripture.content
+FROM w05_grp_scripture
+INNER JOIN w05_grp_book
+ON w05_grp_scripture.book_name = w05_grp_book.book_id
+INNER JOIN w05_grp_volume
+ON w05_grp_scripture.volume_name = w05_grp_volume.volume_id
+WHERE w05_grp_book.book_name ILIKE '%j%';
