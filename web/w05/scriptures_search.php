@@ -30,7 +30,7 @@
 
                 echo '<h1>Scripture Resources</h1>';
 
-                if (isset($_POST['book_name'])) {
+                if (isset($_POST['book'])) {
                     foreach ($db->query("SELECT
                         w05_grp_volume.volume_name,
                         w05_grp_book.book_name,
