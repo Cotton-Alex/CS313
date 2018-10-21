@@ -129,7 +129,13 @@ SELECT * FROM w05_grp_book;
 SELECT * FROM w05_grp_scripture;
 SELECT * FROM w05_grp_volume;
 
-SELECT w05_grp_book.book_name, w05_grp_volume.volume_name 
-FROM w05_grp_book 
+SELECT *
+FROM w05_grp_scripture 
 INNER JOIN w05_grp_volume 
-ON w05_grp_volume.volume_id = w05_grp_book.volume_name;
+ON w05_grp_scripture.volume_name = w05_grp_volume.volume_id
+INNER JOIN w05_grp_book
+ON w05_grp_scripture.book_name = w05_grp_book.book_id;
+
+select *
+from w05_grp_scripture
+inner join w05_grp_volume on w05_grp_scripture.volume_name =  w05_grp_volume.volume_id
