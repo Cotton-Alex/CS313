@@ -35,7 +35,6 @@
 //                    echo '"' . $row["content"] . '"</p>';
 
                 foreach ($db->query("SELECT
-                        w05_grp_scripture.scripture_id
                         w05_grp_volume.volume_name,
                         w05_grp_book.book_name,
                         w05_grp_scripture.chapter, 
