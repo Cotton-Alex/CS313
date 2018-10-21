@@ -48,8 +48,18 @@
                     }
                 } else {
 
-                    foreach ($db->query('select * from w05_grp_scripture') as $row) {
-                        echo "<a href='scriptures.php?id=" . $row["scripture_id"] . "'><span class='bold'>" . $row['volume_name'] . " " . $row['book_name'] . " " . $row['chapter'] . ":" . $row['verse'] . "</span>";
+                    foreach ($db->query('SELECT
+                        w05_grp_volume.volume_name,
+                        w05_grp_book.book_name,
+                        w05_grp_scripture.chapter, 
+                        w05_grp_scripture.verse,
+                        w05_grp_scripture.content
+                        FROM w05_grp_scripture
+                        INNER JOIN w05_grp_book
+                        ON w05_grp_scripture.book_name = w05_grp_book.book_id
+                        INNER JOIN w05_grp_volume
+                        ON w05_grp_scripture.volume_name = w05_grp_volume.volume_id') as $row) {
+                        echo "<a href='scriptures.php?id=" . $row["scripture_id"] . "'><span class='bold'>" . $row['w05_grp_volume.volume_name'] . " " . $row['w05_grp_book.book_name'] . " " . $row['chapter'] . ":" . $row['verse'] . "</span>";
                         echo '</a><br>';
                     }
                 }
