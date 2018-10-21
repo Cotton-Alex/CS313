@@ -44,7 +44,7 @@
                         INNER JOIN w05_grp_volume
                         ON w05_grp_scripture.volume_name = w05_grp_volume.volume_id
                         WHERE w05_grp_book.book_name ILIKE '%" . htmlspecialchars($_POST['book']) . "%';") as $row) {
-                        echo "<a href='scripturedisplay.php?id=" . $row["scripture_id"] . "'><span class='bold'>" . $row['volume_name'] . " ~ " . $row['book_name'] . " " . $row['chapter'] . ":" . $row['verse'] . "</span>";
+                        echo "<a href='scripturedisplay.php?id=" . $row["scripture_id"] . "'><span class='bold'>" . $row['volume_name'] . " - " . $row['book_name'] . " " . $row['chapter'] . ":" . $row['verse'] . "</span>";
                         echo '</a><br>';
                     }
                 } else {
