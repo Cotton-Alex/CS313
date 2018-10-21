@@ -59,7 +59,7 @@
                         ON w05_grp_scripture.book_name = w05_grp_book.book_id
                         INNER JOIN w05_grp_volume
                         ON w05_grp_scripture.volume_name = w05_grp_volume.volume_id;') as $row) {
-                        echo "<a href='scriptures.php?id=" . $row["volume_name"] . "'><span class='bold'>" . $row['book_name'] . " " . $row['chapter'] . ":" . $row['verse'] . "</span>";
+                        echo "<a href='scriptures.php?id=" . $row["w05_grp_volume.volume_name"] . "'><span class='bold'>" . $row['book_name'] . " " . $row['chapter'] . ":" . $row['verse'] . "</span>";
                         echo '</a><br>';
                     }
                 }
