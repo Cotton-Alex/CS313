@@ -34,8 +34,19 @@
 //                    echo "<p><span class='bold'>" . $row['book_name'] . " " . $row['chapter'] . ":" . $row['verse'] . " - </span>";
 //                    echo '"' . $row["content"] . '"</p>';
 
-                foreach ($db->query("SELECT * FROM w05_grp_scripture INNER JOIN w05_grp_volume ON w05_grp_scripture.volume_name = w05_grp_volume.volume_id INNER JOIN w05_grp_book ON w05_grp_scripture.book_name = w05_grp_book.book_id where scripture_id = " . htmlspecialchars($_GET['id']) . "") as $row) {
-                    echo "<p><span class='bold'>" . $row['volume_name'] . " " . $row['book_name'] . " " . $row['chapter'] . ":" . $row['verse'] . " - </span>";
+                foreach ($db->query("SELECT
+                        w05_grp_volume.volume_name,
+                        w05_grp_book.book_name,
+                        w05_grp_scripture.chapter, 
+                        w05_grp_scripture.verse,
+                        w05_grp_scripture.content
+                        FROM w05_grp_scripture
+                        INNER JOIN w05_grp_book
+                        ON w05_grp_scripture.book_name = w05_grp_book.book_id
+                        INNER JOIN w05_grp_volume
+                        ON w05_grp_scripture.volume_name = w05_grp_volume.volume_id
+                        WHERE scripture_id = " . htmlspecialchars($_GET['id']) . "") as $row) {
+                    echo "<p><span class='bold'>" . $row['volume_name'] . " ~~~~ " . $row['book_name'] . " " . $row['chapter'] . ":" . $row['verse'] . " - </span>";
                     echo '"' . $row["content"] . '"</p>';
                 }
             } catch (PDOException $ex) {
