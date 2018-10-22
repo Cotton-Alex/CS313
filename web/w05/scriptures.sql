@@ -5,7 +5,8 @@ CREATE TABLE w05_grp_volume (
 	volume_name varchar(30)
 );
 
-INSERT INTO w05_grp_volume(volume_name) VALUES
+INSERT INTO w05_grp_volume(volume_name)
+VALUES
 ('Old Testament'),
 ('New Testament'),
 ('Book of Mormon'),
@@ -18,7 +19,8 @@ CREATE TABLE w05_grp_book (
 	volume_name int references w05_grp_volume(volume_id)
 );
 
-INSERT INTO w05_grp_book(book_name, volume_name) VALUES
+INSERT INTO w05_grp_book(book_name, volume_name)
+VALUES
 ('Genesis',1),
 ('Exodus',1),
 ('Leviticus',1),
@@ -116,7 +118,8 @@ CREATE TABLE w05_grp_scripture (
   content text not null);
 
 INSERT INTO w05_grp_scripture 
-(volume_name, book_name, chapter, verse, content) VALUES
+(volume_name, book_name, chapter, verse, content)
+VALUES
 (1,43,1,5,'And the light shineth in darkness; and the darkness comprehended it not.'),
 (4,82,88,49,'The light shineth in darkness, and the darkness comprehendeth it not; nevertheless, the day shall come when you shall comprehend even God, being quickened in him and by him.'),
 (4,82,93,28,'He that keepeth his commandments receiveth truth and light, until he is glorified in truth and knoweth all things.'),
@@ -140,17 +143,28 @@ select *
 from w05_grp_scripture
 inner join w05_grp_volume on w05_grp_scripture.volume_name =  w05_grp_volume.volume_id
 
-SELECT w05_grp_volume.volume_name, w05_grp_book.book_name, w05_grp_scripture.chapter, w05_grp_scripture.verse, w05_grp_scripture.content
+SELECT
+w05_grp_volume.volume_name,
+w05_grp_book.book_name,
+w05_grp_scripture.chapter,
+w05_grp_scripture.verse,
+w05_grp_scripture.content
 FROM w05_grp_scripture
 INNER JOIN w05_grp_book
 ON w05_grp_scripture.book_name = w05_grp_book.book_id
 INNER JOIN w05_grp_volume
 ON w05_grp_scripture.volume_name = w05_grp_volume.volume_id;
 
-SELECT w05_grp_volume.volume_name, w05_grp_book.book_name, w05_grp_scripture.chapter, w05_grp_scripture.verse, w05_grp_scripture.content
+
+SELECT
+w05_grp_volume.volume_name,
+w05_grp_book.book_name,
+w05_grp_scripture.chapter,
+w05_grp_scripture.verse,
+w05_grp_scripture.content
 FROM w05_grp_scripture
 INNER JOIN w05_grp_book
 ON w05_grp_scripture.book_name = w05_grp_book.book_id
 INNER JOIN w05_grp_volume
 ON w05_grp_scripture.volume_name = w05_grp_volume.volume_id
-WHERE w05_grp_book.book_name ILIKE '%j%';
+WHERE w05_grp_book.book_name ILIKE '%Mo%';
