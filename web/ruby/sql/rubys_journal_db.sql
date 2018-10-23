@@ -12,7 +12,17 @@ VALUES
 ('1956-1960'),
 ('1961-1965'),
 ('1966-1968'),
-('1969-1973');
+('1969-1973'),
+('1975-1978'),
+('1979-1981'),
+('1982-1984'),
+('1985-1987'),
+('1988'),
+('198'),
+('1990'),
+('1991'),
+('1992-1993'),
+('1994');
 
 CREATE TABLE image (
 	image_id serial primary key,
@@ -67,9 +77,9 @@ VALUES
 (1, '1946-01-02', 2, '1948-01-02', 'Today I washed almost frozen my feet & hands so cold very big washing to. Clothes didn''t dry so well either'),
 (1, '1946-01-02', 2, '1949-01-02', 'Good day at cafe $272.31. We went to the show saw Red Skelton in "Southern Yankie" Mary Trujillo came to work tonight. I am glad to.'),
 (1, '1946-01-02', 2, '1950-01-02', '(1950?)- Holoday today I made my Gray skirt like it pretty much & pretty cold here tonight. I cut out my dark and light blue dress have had the material for years. Larry better with cough.'),
-(1, '1946-01-03', 2, '1946-01-03', NULL),
-(1, '1946-01-03', 2, '1947-01-03', 'Today it was so very cold we didn''t go to the city, went to Runts was 12 below Hennessey. Coldest in history here in many years. Uncle John''s house was burned.'),
-(1, '1946-01-03', 2, '1948-01-03', 'Today Better day today I ironed all day & way into the night but finished got pretty sor at Ray for not letting me where he was gone but O.K. now.'),
-(1, '1946-01-03', 2, '1949-01-03', 'Today good day 190.68. Very cold here & some snow. Very cold tonight. I didn'' make pies today. Kids started back to school.'),
-(1, '1946-01-03', 2, '1950-01-03', '(1950?)- Today no work at plant but I made my blue dress. The dark and light blue one. Real pretty.'),
+(1, '1946-01-03', 3, '1946-01-03', NULL),
+(1, '1946-01-03', 3, '1947-01-03', 'Today it was so very cold we didn''t go to the city, went to Runts was 12 below Hennessey. Coldest in history here in many years. Uncle John''s house was burned.'),
+(1, '1946-01-03', 3, '1948-01-03', 'Today Better day today I ironed all day & way into the night but finished got pretty sor at Ray for not letting me where he was gone but O.K. now.'),
+(1, '1946-01-03', 3, '1949-01-03', 'Today good day 190.68. Very cold here & some snow. Very cold tonight. I didn'' make pies today. Kids started back to school.'),
+(1, '1946-01-03', 3, '1950-01-03', '(1950?)- Today no work at plant but I made my blue dress. The dark and light blue one. Real pretty.'),
 (2, '1951-01-01', 16, '1951-01-01', 'asdljkf asdasd fjasl kf  skjdfl ka');

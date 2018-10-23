@@ -46,7 +46,7 @@ header {
     padding: 0px;
     background-size: 100%;
     background-image: linear-gradient(rgba(255,255,255,.75),
-		rgba(255,255,255,0.75)), url("../images/headerBackground.jpg");
+		rgba(255,255,255,0.75)), url("http://rubysjournal.com/images/headerBackground.jpg");
 }
 #top_bar_container {
     width: 960px;
@@ -544,7 +544,7 @@ footer {
     border-top: 2px solid #262626;
     background-size: 100%;
     background-image: linear-gradient(rgba(255,255,255,.75),
-        rgba(255,255,255,0.75)), url("../images/footerBackground.jpg");
+        rgba(255,255,255,0.75)), url("http://rubysjournal.com/images/footerBackground.jpg");
     text-align: center;
     font-family: 'Raleway', san-serif;
     font-weight: 300;
