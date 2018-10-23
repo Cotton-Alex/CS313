@@ -2,11 +2,11 @@
 <html lang="en">
     <head>
         <title>Ruby's Journal | Home</title>
-        <?php require './ruby/mod/head.php'; ?>
+        <?php require '../ruby/mod/head.php'; ?>
     </head>
     <body>
         <header id="page_header">
-            <?php require './ruby/mod/header.php'; ?>
+            <?php require '../ruby/mod/header.php'; ?>
         </header>
         <main>
             <div id="journal_covers">
@@ -79,6 +79,6 @@
             </figure>-->
             </div>
         </main>
-        <?php require './ruby/mod/footer.php'; ?>
+        <?php require '../ruby/mod/footer.php'; ?>
     </body>
 </html>
