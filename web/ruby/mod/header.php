@@ -8,14 +8,14 @@
                         <!--<li><a href="./index.php">JournalsOld</a></li>-->
                         <li>
                             <div class="dropdown">
-                                <a class="dropbtn" href="../index.php">Journals</a>
+                                <a class="dropbtn" href="https://cotton-app.herokuapp.com/ruby/index.php">Journals</a>
                                 <div class="dropdown-content" id="myDropdown">
-                                    <a href="../read/?action=1946-1950">1946-1950</a>
-                                    <a href="../read/?action=1951-1955">1951-1955</a>
-                                    <a href="../read/?action=1956-1960">1956-1960</a>
-                                    <a href="../read/?action=1961-1965">1961-1965</a>
-                                    <a href="../read/?action=1966-1968">1966-1968</a>
-                                    <a href="../read/?action=1969-1973">1969-1973</a>
+                                    <a href="https://cotton-app.herokuapp.com/ruby/read/?action=1946-1950">1946-1950</a>
+                                    <a href="https://cotton-app.herokuapp.com/ruby/read/?action=1951-1955">1951-1955</a>
+                                    <a href="https://cotton-app.herokuapp.com/ruby/read/?action=1956-1960">1956-1960</a>
+                                    <a href="https://cotton-app.herokuapp.com/ruby/read/?action=1961-1965">1961-1965</a>
+                                    <a href="https://cotton-app.herokuapp.com/ruby/read/?action=1966-1968">1966-1968</a>
+                                    <a href="https://cotton-app.herokuapp.com/ruby/read/?action=1969-1973">1969-1973</a>
                                 </div>
                             </div>
                         </li>

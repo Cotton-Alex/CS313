@@ -10,10 +10,10 @@
 <link href="https://fonts.googleapis.com/css?family=Raleway:200,300,400" rel="stylesheet">
 
 <!--Favicon stuff-->
-<link rel="apple-touch-icon" sizes="180x180" href="https://cotton-app.herokuapp.com/ruby/icon/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://cotton-app.herokuapp.com/ruby/icon/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="https://cotton-app.herokuapp.com/ruby/icon/favicon-16x16.png">
-<link rel="manifest" href="https://cotton-app.herokuapp.com/ruby/icon/site.webmanifest">
-<link rel="mask-icon" href="https://cotton-app.herokuapp.com/ruby/icon/safari-pinned-tab.svg" color="#ff0000">
+<link rel="apple-touch-icon" sizes="180x180" href="http://rubysjournal.com/icon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://rubysjournal.com/icon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="http://rubysjournal.com/icon/favicon-16x16.png">
+<link rel="manifest" href="http://rubysjournal.com/icon/site.webmanifest">
+<link rel="mask-icon" href="http://rubysjournal.com/icon/safari-pinned-tab.svg" color="#ff0000">
 <meta name="msapplication-TileColor" content="#dc143c">
 <meta name="theme-color" content="#ffffff">

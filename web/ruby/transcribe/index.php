@@ -1,9 +1,9 @@
 <?php
 
-require('../model/database.php');
-require('../model/entries_db.php');
-require('../model/journal_db.php');
-require('../model/transcribe_db.php');
+require('https://cotton-app.herokuapp.com/ruby/model/database.php');
+require('https://cotton-app.herokuapp.com/ruby/model/entries_db.php');
+require('https://cotton-app.herokuapp.com/ruby/model/journal_db.php');
+require('https://cotton-app.herokuapp.com/ruby/model/transcribe_db.php');
 
 $action = filter_input(INPUT_POST, 'action');
 if ($action == NULL) {
@@ -40,7 +40,7 @@ if ($action == 'add_entry') {
     if ($journal_id == NULL || $journal_id == FALSE || $imageID == NULL ||
             $pageSideID == NULL || $entryDate == NULL || $entryData == FALSE) {
         $error = "Invalid entry. Check all fields and try again.";
-        include('../errors/error.php');
+        include('https://cotton-app.herokuapp.com/ruby/errors/error.php');
     } else {
         add_entry($journal_id, $imageID, $pageSideID, $entryDate, $entryData);
         header("Location: .?image_id=$image_id");
