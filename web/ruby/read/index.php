@@ -1,15 +1,15 @@
 <?php
 
-require('.z/model/database.php');
-require('../model/entries_db.php');
-require('../model/journal_db.php');
+require('../ruby/model/database.php');
+require('../ruby/model/entries_db.php');
+require('../ruby/model/journal_db.php');
 
 $action = filter_input(INPUT_POST, 'action');
 if ($action == NULL) {
     $action = filter_input(INPUT_GET, 'action');
     if ($action == NULL) {
         $error = 'Something went terribly wrong.';
-        include('../errors/error.php');
+        include('../ruby/errors/error.php');
     }
     if ($action == 'change_date') {
         $image_id = filter_input(INPUT_GET, 'image_id', FILTER_VALIDATE_INT);
