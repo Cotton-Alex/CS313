@@ -28,6 +28,7 @@ if ($action == NULL) {
         include('read_entries.php');
     }
     if ($action == '1946-1950') {
+        echo ("action = 1946-1950 was passed");
         $journal_id = filter_input(INPUT_GET, 'journal_id', FILTER_VALIDATE_INT);
         $image_id = filter_input(INPUT_GET, 'image_id', FILTER_VALIDATE_INT);
         if ($journal_id == NULL || $journal_id == FALSE) {
