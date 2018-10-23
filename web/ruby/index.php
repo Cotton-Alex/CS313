@@ -2,16 +2,16 @@
 <html lang="en">
     <head>
         <title>Ruby's Journal | Home</title>
-        <?php require 'https://cotton-app.herokuapp.com/ruby/mod/head.php'; ?>
+        <?php require './ruby/mod/head.php'; ?>
     </head>
     <body>
         <header id="page_header">
-            <?php require 'https://cotton-app.herokuapp.com/ruby/mod/header.php'; ?>
+            <?php require './ruby/mod/header.php'; ?>
         </header>
         <main>
-            <div id="journal_covers"> 
+            <div id="journal_covers">
                 <!--Working Journal Covers-->
-                <figure> <a href="read/?action=1946-1950"><img src="http://www.rubysjournal.com/images/1946-1950-001-258x300.jpg" alt="Ruby's 1946-1950 journal" /> </a>
+                <figure> <a href="/ruby/read/?action=1946-1950"><img src="http://www.rubysjournal.com/images/1946-1950-001-258x300.jpg" alt="Ruby's 1946-1950 journal" /> </a>
                     <figcaption>1946-1950</figcaption>
                 </figure>
                 <figure> <a href="read/?action=1951-1955"> <img src="http://www.rubysjournal.com/images/1951-1955-001-246x300.jpg" alt="Ruby's 1951-1955 Journal" /></a>
@@ -79,6 +79,6 @@
             </figure>-->
             </div>
         </main>
-        <?php require './mod/footer.php'; ?>
+        <?php require './ruby/mod/footer.php'; ?>
     </body>
 </html>
