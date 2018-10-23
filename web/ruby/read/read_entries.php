@@ -2,25 +2,25 @@
 <html lang="en">
     <head>
         <title>Ruby's Journal</title>
-        <?php include '../mod/head.php'; ?>
+        <?php include '../ruby/mod/head.php'; ?>
     </head>
     <body>
         <div>
             <header id="page_header">
                 <div>
-                    <?php include '../mod/header.php'; ?>
+                    <?php include '../ruby/mod/header.php'; ?>
                 </div>
             </header>
             <main>
                 <div id="main_content">
-                    <img id="journal_page" src="../images/<?php echo $image_name; ?>" alt="" />
+                    <img id="journal_page" src="http://www.rubysjournal.com/images/<?php echo $image_name; ?>" alt="" />
                     <aside>
                         <div id="aside_container">
                             <div id="basic_copy_center">
                                 <p>Entries</p>
                             </div>
                             <div id="page_aside">
-                                <?php include('../mod/list_entries.php'); ?>
+                                <!--?php include('../mod/list_entries.php'); ?>-->
                             </div>
                         </div>
                     </aside>
@@ -55,7 +55,7 @@
 
                 </div>
             </main>
-            <?php include '../mod/footer.php'; ?>
+            <?php include '../ruby/mod/footer.php'; ?>
         </div>
     </body>
 </html>
