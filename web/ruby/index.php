@@ -2,11 +2,11 @@
 <html lang="en">
     <head>
         <title>Ruby's Journal | Home</title>
-        <?php require './mod/head.php'; ?>
+        <?php require 'https://cotton-app.herokuapp.com/ruby/mod/head.php'; ?>
     </head>
     <body>
         <header id="page_header">
-            <?php require './mod/header.php'; ?>
+            <?php require 'https://cotton-app.herokuapp.com/ruby/mod/header.php'; ?>
         </header>
         <main>
             <div id="journal_covers"> 
@@ -30,42 +30,42 @@
                     <figcaption>1969-1973</figcaption>
                 </figure>
                 <!-- FUTURE JOURNALS-->
-                <figure> <!--<a href="imaages/1974-1978-001-264x300.jpg">--> <img src="images/1974-1978-001-264x300.jpg" alt="Ruby's 1974-1978 Journal" />
+                <figure> <!--<a href="imaages/1974-1978-001-264x300.jpg">--> <img src="http://www.rubysjournal.com/images/1974-1978-001-264x300.jpg" alt="Ruby's 1974-1978 Journal" />
                     <figcaption>1974-1978 - Coming Soon</figcaption>
                     <!--</a>--> 
                 </figure>
-                <figure> <!--<a href="images/1979-1981-001-205x300.jpg">--> <img src="images/1979-1981-001-205x300.jpg" alt="Ruby's 1979-1981 Journal" />
+                <figure> <!--<a href="images/1979-1981-001-205x300.jpg">--> <img src="http://www.rubysjournal.com/images/1979-1981-001-205x300.jpg" alt="Ruby's 1979-1981 Journal" />
                     <figcaption>1979-1981 - Coming Soon</figcaption>
                     <!--</a>--> 
                 </figure>
-                <figure> <!--<a href="images/1982-1984-001-219x300.jpg">--> <img src="images/1982-1984-001-219x300.jpg" alt="Ruby's 1982-1984 Journal" />
+                <figure> <!--<a href="images/1982-1984-001-219x300.jpg">--> <img src="http://www.rubysjournal.com/images/1982-1984-001-219x300.jpg" alt="Ruby's 1982-1984 Journal" />
                     <figcaption>1982-1984 - Coming Soon</figcaption>
                     <!--</a>--> 
                 </figure>
-                <figure> <!--<a href="images/1985-1987-001-228x300.jpg">--> <img src="images/1985-1987-001-228x300.jpg" alt="Ruby's 1985-1987 Journal" />
+                <figure> <!--<a href="images/1985-1987-001-228x300.jpg">--> <img src="http://www.rubysjournal.com/images/1985-1987-001-228x300.jpg" alt="Ruby's 1985-1987 Journal" />
                     <figcaption>1985-1987 - Coming Soon</figcaption>
                     <!--</a>--> 
                 </figure>
-                <figure> <!--<a href="images/1988-001-255x300.jpg">--> <img src="images/1988-001-255x300.jpg" alt="Ruby's 1988 Journal" />
+                <figure> <!--<a href="images/1988-001-255x300.jpg">--> <img src="http://www.rubysjournal.com/images/1988-001-255x300.jpg" alt="Ruby's 1988 Journal" />
                     <figcaption>1988 - Coming Soon</figcaption>
                     <!--</a>--> 
                 </figure>
-                <figure> <!--<a href="images/1989-001-216x300.jpg">--> <img src="images/1989-001-216x300.jpg" alt="Ruby's 1989 Journal" />
+                <figure> <!--<a href="images/1989-001-216x300.jpg">--> <img src="http://www.rubysjournal.com/images/1989-001-216x300.jpg" alt="Ruby's 1989 Journal" />
                     <figcaption>1989 - Coming Soon</figcaption>
                     <!--</a>--> 
                 </figure>
-                <figure> <!--<a href="images/1990-001-209x300.jpg">--> <img src="images/1990-001-209x300.jpg" alt="Ruby's 1990 Journal" />
+                <figure> <!--<a href="images/1990-001-209x300.jpg">--> <img src="http://www.rubysjournal.com/images/1990-001-209x300.jpg" alt="Ruby's 1990 Journal" />
                     <figcaption>1990 - Coming Soon</figcaption> <!--</a>--> 
                 </figure>
-                <figure> <!--<a href="images/1991-001-210x300.jpg">--> <img src="images/1991-001-210x300.jpg" alt="Ruby's 1991 Journal" />
+                <figure> <!--<a href="images/1991-001-210x300.jpg">--> <img src="http://www.rubysjournal.com/images/1991-001-210x300.jpg" alt="Ruby's 1991 Journal" />
                     <figcaption>1991 - Coming Soon</figcaption>
                     <!--</a>--> 
                 </figure>
-                <figure> <!--<a href="images/1992-1993-001-228x300.jpg">--> <img src="images/1992-1993-001-228x300.jpg" alt="Ruby's 1992-1993 Journal" />
+                <figure> <!--<a href="images/1992-1993-001-228x300.jpg">--> <img src="http://www.rubysjournal.com/images/1992-1993-001-228x300.jpg" alt="Ruby's 1992-1993 Journal" />
                     <figcaption>1992-1993 - Coming Soon</figcaption>
                     <!--</a>--> 
                 </figure>
-                <figure> <!--<a href="images/1994-001-224x300.jpg">--> <img src="images/1994-001-224x300.jpg" alt="Ruby's 1994 Journal" />
+                <figure> <!--<a href="images/1994-001-224x300.jpg">--> <img src="http://www.rubysjournal.com/images/1994-001-224x300.jpg" alt="Ruby's 1994 Journal" />
                     <figcaption>1994 - Coming Soon</figcaption>
                     <!--</a>--> 
                 </figure>
