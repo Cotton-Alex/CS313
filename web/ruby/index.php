@@ -2,11 +2,11 @@
 <html lang="en">
     <head>
         <title>Ruby's Journal | Home</title>
-        <?php require 'https://cotton-app.herokuapp.com/ruby/mod/head.php'; ?>
+        <?php require 'http://cotton-app.herokuapp.com/ruby/mod/head.php'; ?>
     </head>
     <body>
         <header id="page_header">
-            <?php require 'https://cotton-app.herokuapp.com/ruby/mod/header.php'; ?>
+            <?php require 'http://cotton-app.herokuapp.com/ruby/mod/header.php'; ?>
         </header>
         <main>
             <div id="journal_covers"> 
@@ -79,6 +79,6 @@
             </figure>-->
             </div>
         </main>
-        <?php require 'https://cotton-app.herokuapp.com/ruby/mod/footer.php'; ?>
+        <?php require 'http://cotton-app.herokuapp.com/ruby/mod/footer.php'; ?>
     </body>
 </html>

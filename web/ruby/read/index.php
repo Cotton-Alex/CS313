@@ -1,8 +1,8 @@
 <?php
 
-require('https://cotton-app.herokuapp.com/ruby/model/database.php');
-require('https://cotton-app.herokuapp.com/ruby/model/entries_db.php');
-require('https://cotton-app.herokuapp.com/ruby/model/journal_db.php');
+require('http://cotton-app.herokuapp.com/ruby/model/database.php');
+require('http://cotton-app.herokuapp.com/ruby/model/entries_db.php');
+require('http://cotton-app.herokuapp.com/ruby/model/journal_db.php');
 
 $action = filter_input(INPUT_POST, 'action');
 if ($action == NULL) {

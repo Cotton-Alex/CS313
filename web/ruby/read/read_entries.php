@@ -2,13 +2,13 @@
 <html lang="en">
     <head>
         <title>Ruby's Journal</title>
-        <?php include 'https://cotton-app.herokuapp.com/ruby/mod/head.php'; ?>
+        <?php include 'http://cotton-app.herokuapp.com/ruby/mod/head.php'; ?>
     </head>
     <body>
         <div>
             <header id="page_header">
                 <div>
-                    <?php include 'https://cotton-app.herokuapp.com/ruby/mod/header.php'; ?>
+                    <?php include 'http://cotton-app.herokuapp.com/ruby/mod/header.php'; ?>
                 </div>
             </header>
             <main>
@@ -20,7 +20,7 @@
                                 <p>Entries</p>
                             </div>
                             <div id="page_aside">
-                                <?php include('https://cotton-app.herokuapp.com/ruby/mod/list_entries.php'); ?>
+                                <?php include('http://cotton-app.herokuapp.com/ruby/mod/list_entries.php'); ?>
                             </div>
                         </div>
                     </aside>
@@ -55,7 +55,7 @@
 
                 </div>
             </main>
-            <?php include 'https://cotton-app.herokuapp.com/ruby/mod/footer.php'; ?>
+            <?php include 'http://cotton-app.herokuapp.com/ruby/mod/footer.php'; ?>
         </div>
     </body>
 </html>
