@@ -11,22 +11,27 @@
         <main>
             <div id="journal_covers">
                 <!--Working Journal Covers-->
-                <figure> <a href="read/?action=1946-1950"><img src="http://www.rubysjournal.com/images/1946-1950-001-258x300.jpg" alt="Ruby's 1946-1950 journal" /> </a>
+                <figure> <a href="1946-1950.php" name="1956-1950"><img src="http://www.rubysjournal.com/images/1946-1950-001-258x300.jpg" alt="Ruby's 1946-1950 journal" /> </a>
                     <figcaption>1946-1950</figcaption>
                 </figure>
-                <figure> <a href="read/?action=1951-1955"> <img src="http://www.rubysjournal.com/images/1951-1955-001-246x300.jpg" alt="Ruby's 1951-1955 Journal" /></a>
+                <figure> <!--<a href="read/?action=1951-1955">--> <img src="http://www.rubysjournal.com/images/1951-1955-001-246x300.jpg" alt="Ruby's 1951-1955 Journal" />
+                    <!--</a>-->
                     <figcaption>1951-1955</figcaption>
                 </figure>
-                <figure> <a href="read/?action=1956-1960"> <img src="http://www.rubysjournal.com/images/1956-1960-001-239x300.jpg" alt="Ruby's 1956-1960 Journal" /></a>
+                <figure> <!--<a href="read/?action=1956-1960">--> <img src="http://www.rubysjournal.com/images/1956-1960-001-239x300.jpg" alt="Ruby's 1956-1960 Journal" />
+                    <!--</a>-->
                     <figcaption>1956-1960</figcaption> 
                 </figure>
-                <figure> <a href="read/?action=1961-1965"> <img src="http://www.rubysjournal.com/images/1961-1965-001-261x300.jpg" alt="Ruby's 1961-1965 Journal" /></a>
+                <figure> <!--<a href="read/?action=1961-1965">--> <img src="http://www.rubysjournal.com/images/1961-1965-001-261x300.jpg" alt="Ruby's 1961-1965 Journal" />
+                    <!--</a>-->
                     <figcaption>1961-1965</figcaption>
                 </figure>
-                <figure> <a href="read/?action=1966-1968"> <img src="http://www.rubysjournal.com/images/1966-1968-001-256x300.jpg" alt="Ruby's 1966-1968 Journal" /></a>
+                <figure> <!--<a href="read/?action=1966-1968">--> <img src="http://www.rubysjournal.com/images/1966-1968-001-256x300.jpg" alt="Ruby's 1966-1968 Journal" />
+                    <!--</a>-->
                     <figcaption>1966-1968</figcaption>
                 </figure>
-                <figure> <a href="read/?action=1969-1973"> <img src="http://www.rubysjournal.com/images/1969-1973-001-248x300.jpg" alt="Ruby's 1969-1973 Journal" /></a>
+                <figure> <!--<a href="read/?action=1969-1973">--> <img src="http://www.rubysjournal.com/images/1969-1973-001-248x300.jpg" alt="Ruby's 1969-1973 Journal" />
+                    <!--</a>-->
                     <figcaption>1969-1973</figcaption>
                 </figure>
                 <!-- FUTURE JOURNALS-->

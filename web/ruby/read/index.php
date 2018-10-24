@@ -1,8 +1,8 @@
 <?php
 
-require('../ruby/model/database.php');
+//require('../ruby/model/database.php');
 require('../ruby/model/entries_db.php');
-require('../ruby/model/journal_db.php');
+//require('../ruby/model/journal_db.php');
 
 $action = filter_input(INPUT_POST, 'action');
 if ($action == NULL) {
