@@ -63,7 +63,7 @@
 					$queryString = "SELECT";
 					$queryString .= " journal.journal_name, image.image_name, entry.page_date, entry.image_id, entry.entry_date, entry.entry_text";
 					$queryString .= " FROM entry";
-					$queryString .= "INNER JOIN image";
+					$queryString .= " INNER JOIN image";
 					$queryString .= " ON entry.image_id = image.image_id";
 					$queryString .= " INNER JOIN journal";
 					$queryString .= " ON entry.journal_id = journal.journal_id";
