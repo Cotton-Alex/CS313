@@ -69,12 +69,18 @@
 					$queryString .= " ON entry.image_id = image.image_id";
 					$queryString .= " INNER JOIN journal";
 					$queryString .= " ON entry.journal_id = journal.journal_id";
-					$queryString .= " WHERE journal.journal_name =" . "'1946-1950'" . ';';
+					$queryString .= " WHERE journal.journal_name =" . "'1946-1950'" . 'ORDER BY entry.entry_id DESC LIMIT 1;';
 
 					$query = $db->prepare($queryString);
 					$query->execute();
 					$results = $query->fetchAll();
 					echo '<br>';
+                                        echo $results['journal.journal_name'];
+                                        echo $results['image.image_name'];
+                                        echo $results['entry.page_date'];
+                                        echo $results['entry.image_id'];
+                                        echo $results['entry.image_name'];
+                                        echo $results['entry.entry_text'];
 					echo '<img id="journal_page" src="http://www.rubysjournal.com/images/' . $results['entry.image_name'] . '" alt=' . '"' . 'Ruby' . '' . 's 1946-1950 journal" />';
 					echo '<br>';
 
