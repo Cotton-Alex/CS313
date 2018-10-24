@@ -41,24 +41,24 @@
 //						echo '</a><br>';
 //					}
 
-                    $image = ($db->query('SELECT
-                        journal.journal_name,
-                        image.image_name,
-                        entry.page_date, 
-                        entry.image_id, 
-                        entry.entry_date, 
-                        entry.entry_text
-                        FROM entry
-                        INNER JOIN image
-                        ON entry.image_id = image.image_id
-                        INNER JOIN journal
-                        ON entry.journal_id = journal.journal_id
-                        WHERE journal.journal_name = ' . "'1946-1950'" . ' 
-                        ORDER BY entry.entry_id DESC
-                        LIMIT 1 ;'));
-                    echo '<br>';
-                    echo '<img id="journal_page" src="http://www.rubysjournal.com/images/' . $image['image_name'] . '" alt=' . '"' . 'Ruby' . '' . 's 1946-1950 journal" />';
-                    echo '<br>';
+//                    $image = ($db->query('SELECT
+//                        journal.journal_name,
+//                        image.image_name,
+//                        entry.page_date, 
+//                        entry.image_id, 
+//                        entry.entry_date, 
+//                        entry.entry_text
+//                        FROM entry
+//                        INNER JOIN image
+//                        ON entry.image_id = image.image_id
+//                        INNER JOIN journal
+//                        ON entry.journal_id = journal.journal_id
+//                        WHERE journal.journal_name = ' . "'1946-1950'" . ' 
+//                        ORDER BY entry.entry_id DESC
+//                        LIMIT 1 ;'));
+//                    echo '<br>';
+//                    echo '<img id="journal_page" src="http://www.rubysjournal.com/images/' . $image['image_name'] . '" alt=' . '"' . 'Ruby' . '' . 's 1946-1950 journal" />';
+//                    echo '<br>';
 
 
 
