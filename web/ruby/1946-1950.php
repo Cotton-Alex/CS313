@@ -39,8 +39,8 @@
                         ON entry.image_id = image.image_id
                         INNER JOIN journal
                         ON entry.journal_id = journal.journal_id
-                        WHERE journal.journal_name = ' . "'1946-1950'" . ' 
-                        ORDER BY entry.entry_id DESC
+                        WHERE entry.page_date = ' . "'1946-01-01'" . ' 
+                        ORDER BY entry.entry_id ASC
                         LIMIT 1 ;') as $page_image) {
                         echo '<br>';
                         echo '<img id="journal_page" src="http://www.rubysjournal.com/images/' . $page_image['image_name'] . '" alt=' . '"' . 'Ruby' . '' . 's 1946-1950 journal" />';
