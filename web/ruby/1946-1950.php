@@ -54,7 +54,7 @@
 						INNER JOIN journal
 						ON entry.journal_id = journal.journal_id
                         WHERE journal.journal_name =' . "'1951-1955'" . ';') as $image) {
-						echo '<img src="http://www.rubysjournal.com/images/' . $image["image_name"] . '.jpg" alt=' . '"' . 'Ruby' . '' . 's 1946-1950 journal" />';
+						echo '<img id="journal_page" src="http://www.rubysjournal.com/images/' . $image["image_name"] . '" alt=' . '"' . 'Ruby' . '' . 's 1946-1950 journal" />';
 						echo '</a><br>';
 					}
 					
