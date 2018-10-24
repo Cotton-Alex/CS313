@@ -40,7 +40,6 @@
 //						echo '<img src="http://www.rubysjournal.com/images/' . $image["image_id"] . '.jpg" alt= Ruby"' . '' . 's 1946-1950 journal" />';
 //						echo '</a><br>';
 //					}
-
 //                    $image = ($db->query('SELECT
 //                        journal.journal_name,
 //                        image.image_name,
@@ -59,9 +58,6 @@
 //                    echo '<br>';
 //                    echo '<img id="journal_page" src="http://www.rubysjournal.com/images/' . $image['image_name'] . '" alt=' . '"' . 'Ruby' . '' . 's 1946-1950 journal" />';
 //                    echo '<br>';
-
-
-
 //					$queryString = "SELECT";
 //					$queryString .= " journal.journal_name, image.image_name, entry.page_date, entry.image_id, entry.entry_date, entry.entry_text";
 //					$queryString .= " FROM entry";
@@ -85,20 +81,38 @@
 //					echo '<img id="journal_page" src="http://www.rubysjournal.com/images/' . $results['entry.image_name'] . '" alt=' . '"' . 'Ruby' . '' . 's 1946-1950 journal" />';
 //					echo '<br>';
 
-
+                    foreach ($db->query('SELECT
+                        journal.journal_name,
+                        image.image_name,
+                        entry.page_date, 
+                        entry.image_id, 
+                        entry.entry_date, 
+                        entry.entry_text
+                        FROM entry
+                        INNER JOIN image
+                        ON entry.image_id = image.image_id
+                        INNER JOIN journal
+                        ON entry.journal_id = journal.journal_id
+                        WHERE journal.journal_name = ' . "'1946-1950'" . ' 
+                        ORDER BY entry.entry_id DESC
+                        LIMIT 1 ;') as $page_image) {
+                        echo '<br>';
+                        echo '<img id="journal_page" src="http://www.rubysjournal.com/images/' . $page_image['image_name'] . '" alt=' . '"' . 'Ruby' . '' . 's 1946-1950 journal" />';
+                        echo '<br>';
+                    }
 
                     foreach ($db->query('SELECT
-						journal.journal_name,
-						image.image_name,
-						entry.page_date, 
-						entry.image_id, 
-						entry.entry_date, 
-						entry.entry_text
-						FROM entry
-						INNER JOIN image
-						ON entry.image_id = image.image_id
-						INNER JOIN journal
-						ON entry.journal_id = journal.journal_id
+                        journal.journal_name,
+                        image.image_name,
+                        entry.page_date, 
+                        entry.image_id, 
+                        entry.entry_date, 
+                        entry.entry_text
+                        FROM entry
+                        INNER JOIN image
+                        ON entry.image_id = image.image_id
+                        INNER JOIN journal
+                        ON entry.journal_id = journal.journal_id
                         WHERE journal.journal_name =' . "'1946-1950'" . ';') as $row) {
                         echo '<br>';
                         echo '<p id="entryOnPage">' . $row['entry_date'] . ' - ' . $row['entry_text'] . '</p>';
@@ -111,6 +125,6 @@
                 ?>
             </div>
         </main>
-        <?php require '../ruby/mod/footer.php'; ?>
+                <?php require '../ruby/mod/footer.php'; ?>
     </body>
 </html>
