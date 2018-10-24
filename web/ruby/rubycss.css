@@ -36,6 +36,13 @@ header {
         rgba(255,255,255,0.75)), url("/images/cropped-IMG_4227-1024x269.jpg");
 	
 }*/
+
+#page_header {
+    background-size: 100%;
+    background-image: linear-gradient(rgba(255,255,255,.75),
+		rgba(255,255,255,0.75)), url("http://rubysjournal.com/images/headerBackground.jpg");
+}
+
 #top_bar {
     display: flex;
     align-items: center;
@@ -44,9 +51,9 @@ header {
     width: 960px;
     margin: auto;
     padding: 0px;
-    background-size: 100%;
+/*    background-size: 100%;
     background-image: linear-gradient(rgba(255,255,255,.75),
-		rgba(255,255,255,0.75)), url("http://rubysjournal.com/images/headerBackground.jpg");
+		rgba(255,255,255,0.75)), url("http://rubysjournal.com/images/headerBackground.jpg");*/
 }
 #top_bar_container {
     width: 960px;
