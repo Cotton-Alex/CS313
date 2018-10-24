@@ -382,9 +382,10 @@ ul p {
 }
 #journal_text {
     display: block;
-    width: 860px;
+    width: 450px;
     margin-top: 30px;
-    margin-left: 0px;
+    margin-left: auto;
+    margin-right: auto;
     padding: 0px;
     text-align: left;
     vertical-align: text-top;
