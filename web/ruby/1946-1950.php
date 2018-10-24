@@ -41,7 +41,7 @@
 //						echo '</a><br>';
 //					}
 
-					foreach ($db->query('SELECT
+					$image = ($db->query('SELECT
 						journal.journal_name,
 						image.image_name,
 						entry.page_date, 
@@ -53,11 +53,11 @@
 						ON entry.image_id = image.image_id
 						INNER JOIN journal
 						ON entry.journal_id = journal.journal_id
-                        WHERE journal.journal_name =' . "'1946-1950'" . ';') as $image) {
+                        WHERE journal.journal_name =' . "'1946-1950'" . ';'));
 						echo '<br>';
 						echo '<img id="journal_page" src="http://www.rubysjournal.com/images/' . $image["image_name"] . '" alt=' . '"' . 'Ruby' . '' . 's 1946-1950 journal" />';
 						echo '<br>';
-					}
+					
 					
 					foreach ($db->query('SELECT
 						journal.journal_name,
