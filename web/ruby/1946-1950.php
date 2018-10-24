@@ -75,12 +75,12 @@
 					$query->execute();
 					$results = $query->fetchAll();
 					echo '<br>';
-                                        echo $results['journal.journal_name'];
-                                        echo $results['image.image_name'];
-                                        echo $results['entry.page_date'];
-                                        echo $results['entry.image_id'];
-                                        echo $results['entry.image_name'];
-                                        echo $results['entry.entry_text'];
+                                        echo '<p>journal.journal_name = ' . $results['journal.journal_name'] . '</p>';
+                                        echo '<p>image.image_name = ' . $results['image.image_name'] . '</p>';
+                                        echo '<p>entry.page_date = ' . $results['entry.page_date'] . '</p>';
+                                        echo '<p>entry.image_id = ' . $results['entry.image_id'] . '</p>';
+                                        echo '<p>entry.image_name = ' . $results['entry.image_name'] . '</p>';
+                                        echo '<p>entry.entry_text = ' . $results['entry.entry_text'] . '</p>';
 					echo '<img id="journal_page" src="http://www.rubysjournal.com/images/' . $results['entry.image_name'] . '" alt=' . '"' . 'Ruby' . '' . 's 1946-1950 journal" />';
 					echo '<br>';
 
