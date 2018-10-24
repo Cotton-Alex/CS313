@@ -40,7 +40,7 @@
 						ON entry.image_id = image.image_id
 						INNER JOIN journal
 						ON entry.journal_id = journal.journal_id
-                        WHERE journal.journal_id = 1946-1950);') as $row) {
+                        WHERE journal.journal_name = 1946-1950);') as $row) {
 						echo "<a href='scriptures.php?id=" . $row["entry_id"] . "'><span class='bold'>" . $row['entry_date'] . " - " . $row['entry_text'] . "</span>";
 						echo '</a><br>';
 					}
