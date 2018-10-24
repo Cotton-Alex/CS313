@@ -62,28 +62,28 @@
 
 
 
-					$queryString = "SELECT";
-					$queryString .= " journal.journal_name, image.image_name, entry.page_date, entry.image_id, entry.entry_date, entry.entry_text";
-					$queryString .= " FROM entry";
-					$queryString .= " INNER JOIN image";
-					$queryString .= " ON entry.image_id = image.image_id";
-					$queryString .= " INNER JOIN journal";
-					$queryString .= " ON entry.journal_id = journal.journal_id";
-					$queryString .= " WHERE journal.journal_name =" . "'1946-1950'" . 'ORDER BY entry.entry_id DESC LIMIT 1;';
-
-					$query = $db->prepare($queryString);
-					$query->execute();
-					$results = $query->fetchAll();
-                                        echo $results;
-					echo '<br>';
-                                        echo '<p>journal.journal_name = ' . $results['journal.journal_name'] . '</p>';
-                                        echo '<p>image.image_name = ' . $results['image.image_name'] . '</p>';
-                                        echo '<p>entry.page_date = ' . $results['entry.page_date'] . '</p>';
-                                        echo '<p>entry.image_id = ' . $results['entry.image_id'] . '</p>';
-                                        echo '<p>entry.image_name = ' . $results['entry.image_name'] . '</p>';
-                                        echo '<p>entry.entry_text = ' . $results['entry.entry_text'] . '</p>';
-					echo '<img id="journal_page" src="http://www.rubysjournal.com/images/' . $results['entry.image_name'] . '" alt=' . '"' . 'Ruby' . '' . 's 1946-1950 journal" />';
-					echo '<br>';
+//					$queryString = "SELECT";
+//					$queryString .= " journal.journal_name, image.image_name, entry.page_date, entry.image_id, entry.entry_date, entry.entry_text";
+//					$queryString .= " FROM entry";
+//					$queryString .= " INNER JOIN image";
+//					$queryString .= " ON entry.image_id = image.image_id";
+//					$queryString .= " INNER JOIN journal";
+//					$queryString .= " ON entry.journal_id = journal.journal_id";
+//					$queryString .= " WHERE journal.journal_name =" . "'1946-1950'" . 'ORDER BY entry.entry_id DESC LIMIT 1;';
+//
+//					$query = $db->prepare($queryString);
+//					$query->execute();
+//					$results = $query->fetchAll();
+//                                        echo $results;
+//					echo '<br>';
+//                                        echo '<p>journal.journal_name = ' . $results['journal.journal_name'] . '</p>';
+//                                        echo '<p>image.image_name = ' . $results['image.image_name'] . '</p>';
+//                                        echo '<p>entry.page_date = ' . $results['entry.page_date'] . '</p>';
+//                                        echo '<p>entry.image_id = ' . $results['entry.image_id'] . '</p>';
+//                                        echo '<p>entry.image_name = ' . $results['entry.image_name'] . '</p>';
+//                                        echo '<p>entry.entry_text = ' . $results['entry.entry_text'] . '</p>';
+//					echo '<img id="journal_page" src="http://www.rubysjournal.com/images/' . $results['entry.image_name'] . '" alt=' . '"' . 'Ruby' . '' . 's 1946-1950 journal" />';
+//					echo '<br>';
 
 
 
@@ -109,14 +109,6 @@
                     die();
                 }
                 ?>
-
-                <div>
-                    <form action="scriptures_search.php" method="post">
-                        <label>Book</label>
-                        <input type="text" name="book" placeholder="John">
-                        <button type="submit">Click Me</button>
-                    </form>
-                </div>
             </div>
         </main>
         <?php require '../ruby/mod/footer.php'; ?>
