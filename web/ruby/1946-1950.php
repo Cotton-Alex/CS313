@@ -71,7 +71,7 @@
 
 					$query = $db->prepare($queryString);
 					$query->execute();
-					$results = $query->fetchAll();
+					$results = $query->fetch_row();
 					echo '<br>';
 					echo '<img id="journal_page" src="http://www.rubysjournal.com/images/' . $results["image.image_name"] . '" alt=' . '"' . 'Ruby' . '' . 's 1946-1950 journal" />';
 					echo '<br>';
