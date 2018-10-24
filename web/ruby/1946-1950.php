@@ -101,13 +101,13 @@
                         echo '<br>';
                     }
                     ?>
+                    <div id="journal_text">
+                        <section>
+                            <table>
+                                <tbody>
 
-                <section>
-                    <table>
-                        <tbody>
-
-                    <?php
-                    foreach ($db->query('SELECT
+                                    <?php
+                                    foreach ($db->query('SELECT
                         journal.journal_name,
                         image.image_name,
                         entry.page_date, 
@@ -120,19 +120,20 @@
                         INNER JOIN journal
                         ON entry.journal_id = journal.journal_id
                         WHERE journal.journal_name =' . "'1946-1950'" . ';') as $row) {
-                        echo '<tr>';
-                        echo '<td id="tdDate">' . $row['entry_date'] . '</td>';
-                        echo '<td> "'. $row['entry_text'] . '"</td>';
-                        echo '<tr>';
-                    }
-                } catch (PDOException $ex) {
-                    echo 'Error!: ' . $ex->getMessage();
-                    die();
-                }
-                ?>
-                        </tbody>
-                    </table>
-                </section>
+                                        echo '<tr>';
+                                        echo '<td id="tdDate">' . $row['entry_date'] . '</td>';
+                                        echo '<td> "' . $row['entry_text'] . '"</td>';
+                                        echo '<tr>';
+                                    }
+                                } catch (PDOException $ex) {
+                                    echo 'Error!: ' . $ex->getMessage();
+                                    die();
+                                }
+                                ?>
+                            </tbody>
+                        </table>
+                    </section>
+                </div>
             </div>
         </main>
         <?php require '../ruby/mod/footer.php'; ?>
