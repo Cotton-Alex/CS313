@@ -73,6 +73,7 @@
                         <button type="submit">Click Me</button>
                     </form>
                 </div>
+				</div>
         </main>
 		<?php require '../ruby/mod/footer.php'; ?>
     </body>
