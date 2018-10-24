@@ -59,10 +59,8 @@
 //					echo '<br>';
 
 
-					$queryString = "select";
-					$queryString .= " scripture_id, book, chapter, verse, content";
-					$queryString .= " from scriptures";
-					$queryString .= "SELECT";
+
+					$queryString = "SELECT";
 					$queryString .= " journal.journal_name, image.image_name, entry.page_date, entry.image_id, entry.entry_date, entry.entry_text";
 					$queryString .= " FROM entry";
 					$queryString .= "INNER JOIN image";
