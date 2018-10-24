@@ -41,40 +41,40 @@
 //						echo '</a><br>';
 //					}
 
-//					$image = ($db->query('SELECT
-//						journal.journal_name,
-//						image.image_name,
-//						entry.page_date, 
-//						entry.image_id, 
-//						entry.entry_date, 
-//						entry.entry_text
-//						FROM entry
-//						INNER JOIN image
-//						ON entry.image_id = image.image_id
-//						INNER JOIN journal
-//						ON entry.journal_id = journal.journal_id
-//                        WHERE journal.journal_name =' . "'1946-1950'" . ';'));
-//					echo '<br>';
-//					echo '<img id="journal_page" src="http://www.rubysjournal.com/images/' . $image["image_name"] . '" alt=' . '"' . 'Ruby' . '' . 's 1946-1950 journal" />';
-//					echo '<br>';
-
-
-
-					$queryString = "SELECT";
-					$queryString .= " journal.journal_name, image.image_name, entry.page_date, entry.image_id, entry.entry_date, entry.entry_text";
-					$queryString .= " FROM entry";
-					$queryString .= " INNER JOIN image";
-					$queryString .= " ON entry.image_id = image.image_id";
-					$queryString .= " INNER JOIN journal";
-					$queryString .= " ON entry.journal_id = journal.journal_id";
-					$queryString .= " WHERE journal.journal_name =" . "'1946-1950'" . ';';
-
-					$query = $db->prepare($queryString);
-					$query->execute();
-					$results = $query->fetch_row();
+					$image = ($db->query('SELECT
+						journal.journal_name,
+						image.image_name,
+						entry.page_date, 
+						entry.image_id, 
+						entry.entry_date, 
+						entry.entry_text
+						FROM entry
+						INNER JOIN image
+						ON entry.image_id = image.image_id
+						INNER JOIN journal
+						ON entry.journal_id = journal.journal_id
+                        WHERE journal.journal_name =' . "'1946-1950'" . ' LIMIT 1 ;'));
 					echo '<br>';
-					echo '<img id="journal_page" src="http://www.rubysjournal.com/images/' . $results["image.image_name"] . '" alt=' . '"' . 'Ruby' . '' . 's 1946-1950 journal" />';
+					echo '<img id="journal_page" src="http://www.rubysjournal.com/images/' . $image["image_name"] . '" alt=' . '"' . 'Ruby' . '' . 's 1946-1950 journal" />';
 					echo '<br>';
+
+
+
+//					$queryString = "SELECT";
+//					$queryString .= " journal.journal_name, image.image_name, entry.page_date, entry.image_id, entry.entry_date, entry.entry_text";
+//					$queryString .= " FROM entry";
+//					$queryString .= " INNER JOIN image";
+//					$queryString .= " ON entry.image_id = image.image_id";
+//					$queryString .= " INNER JOIN journal";
+//					$queryString .= " ON entry.journal_id = journal.journal_id";
+//					$queryString .= " WHERE journal.journal_name =" . "'1946-1950'" . ';';
+//
+//					$query = $db->prepare($queryString);
+//					$query->execute();
+//					$results = $query->fetch_row();
+//					echo '<br>';
+//					echo '<img id="journal_page" src="http://www.rubysjournal.com/images/' . $results["image.image_name"] . '" alt=' . '"' . 'Ruby' . '' . 's 1946-1950 journal" />';
+//					echo '<br>';
 
 
 
