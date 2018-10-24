@@ -74,6 +74,7 @@
 					$query = $db->prepare($queryString);
 					$query->execute();
 					$results = $query->fetchAll();
+                                        echo $results;
 					echo '<br>';
                                         echo '<p>journal.journal_name = ' . $results['journal.journal_name'] . '</p>';
                                         echo '<p>image.image_name = ' . $results['image.image_name'] . '</p>';
