@@ -30,17 +30,14 @@
 				($db->query('SELECT
 						journal.journal_name,
 						image.image_name,
-						entry.page_date, 
-						entry.image_id, 
-						entry.entry_date, 
-						entry.entry_text
+						entry.image_id,
 						FROM entry
 						INNER JOIN image
 						ON entry.image_id = image.image_id
 						INNER JOIN journal
 						ON entry.journal_id = journal.journal_id
-                        WHERE journal.journal_name =' . "'1951-1955'" . ';') instanceof $image);
-				echo '<img src=' . '"http://www.rubysjournal.com/images/' . $image["entry_id"] . '.jpg" alt= Ruby' . '' . 's 1946-1950 journal />';
+                        WHERE journal.journal_name =' . "'1951-1955'" . ';') == $image);
+				echo '<img src="http://www.rubysjournal.com/images/' . $image["image_id"] . '.jpg" alt= Ruby"' . '' . 's 1946-1950 journal" />';
 				echo '</a><br>';
 						
 
