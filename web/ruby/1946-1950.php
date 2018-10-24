@@ -53,9 +53,10 @@
 						ON entry.image_id = image.image_id
 						INNER JOIN journal
 						ON entry.journal_id = journal.journal_id
-                        WHERE journal.journal_name =' . "'1951-1955'" . ';') as $image) {
+                        WHERE journal.journal_name =' . "'1946-1950'" . ';') as $image) {
+						echo '<br>';
 						echo '<img id="journal_page" src="http://www.rubysjournal.com/images/' . $image["image_name"] . '" alt=' . '"' . 'Ruby' . '' . 's 1946-1950 journal" />';
-						echo '</a><br>';
+						echo '<br>';
 					}
 					
 					foreach ($db->query('SELECT
@@ -70,9 +71,10 @@
 						ON entry.image_id = image.image_id
 						INNER JOIN journal
 						ON entry.journal_id = journal.journal_id
-                        WHERE journal.journal_name =' . "'1951-1955'" . ';') as $row) {
-						echo "<p>" . $row["entry_id"] . "'><span class='bold'>" . $row['entry_date'] . " - " . $row['entry_text'] . "</p>";
-						echo '</a><br>';
+                        WHERE journal.journal_name =' . "'1946-1950'" . ';') as $row) {
+						echo '<br>';
+						echo '<p id="entryOnPage">' . $row['entry_date'] . ' - ' . $row['entry_text'] . '</p>';
+						echo '<br>';
 					}
 				} catch (PDOException $ex) {
 					echo 'Error!: ' . $ex->getMessage();
