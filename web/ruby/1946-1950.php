@@ -73,7 +73,7 @@
 					$query->execute();
 					$results = $query->fetchAll();
 					echo '<br>';
-					echo '<img id="journal_page" src="http://www.rubysjournal.com/images/' . $results["image_name"] . '" alt=' . '"' . 'Ruby' . '' . 's 1946-1950 journal" />';
+					echo '<img id="journal_page" src="http://www.rubysjournal.com/images/' . $results["image.image_name"] . '" alt=' . '"' . 'Ruby' . '' . 's 1946-1950 journal" />';
 					echo '<br>';
 
 
