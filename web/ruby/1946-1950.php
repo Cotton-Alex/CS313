@@ -12,36 +12,36 @@
             <div class="container">
 				<?php
 				try {
-				$dbUrl = getenv('DATABASE_URL');
+					$dbUrl = getenv('DATABASE_URL');
 
-				$dbOpts = parse_url($dbUrl);
+					$dbOpts = parse_url($dbUrl);
 
-				$dbHost = $dbOpts["host"];
-				$dbPort = $dbOpts["port"];
-				$dbUser = $dbOpts["user"];
-				$dbPassword = $dbOpts["pass"];
-				$dbName = ltrim($dbOpts["path"], '/');
+					$dbHost = $dbOpts["host"];
+					$dbPort = $dbOpts["port"];
+					$dbUser = $dbOpts["user"];
+					$dbPassword = $dbOpts["pass"];
+					$dbName = ltrim($dbOpts["path"], '/');
 
-				$db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
+					$db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
 
-				$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+					$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-				//echo '<h1>Scripture Resources</h1>';
-				($db->query('SELECT
-						journal.journal_name,
-						image.image_name,
-						entry.image_id,
-						FROM entry
-						INNER JOIN image
-						ON entry.image_id = image.image_id
-						INNER JOIN journal
-						ON entry.journal_id = journal.journal_id
-                        WHERE journal.journal_name =' . "'1951-1955'" . ';') == $image);
-				echo '<img src="http://www.rubysjournal.com/images/' . $image["image_id"] . '.jpg" alt= Ruby"' . '' . 's 1946-1950 journal" />';
-				echo '</a><br>';
-						
+					//echo '<h1>Scripture Resources</h1>';
+//					for ($db->query('SELECT
+//						journal.journal_name,
+//						image.image_name,
+//						entry.image_id,
+//						FROM entry
+//						INNER JOIN image
+//						ON entry.image_id = image.image_id
+//						INNER JOIN journal
+//						ON entry.journal_id = journal.journal_id
+//                        WHERE journal.journal_name =' . "'1951-1955'" . ';') instanceof $image) {
+//						echo '<img src="http://www.rubysjournal.com/images/' . $image["image_id"] . '.jpg" alt= Ruby"' . '' . 's 1946-1950 journal" />';
+//						echo '</a><br>';
+//					}
 
-				foreach ($db->query('SELECT
+					foreach ($db->query('SELECT
 						journal.journal_name,
 						image.image_name,
 						entry.page_date, 
@@ -54,12 +54,12 @@
 						INNER JOIN journal
 						ON entry.journal_id = journal.journal_id
                         WHERE journal.journal_name =' . "'1951-1955'" . ';') as $row) {
-				echo "<a href='scriptures.php?id=" . $row["entry_id"] . "'><span class='bold'>" . $row['entry_date'] . " - " . $row['entry_text'] . "</span>";
-				echo '</a><br>';
-				}
+						echo "<a href='scriptures.php?id=" . $row["entry_id"] . "'><span class='bold'>" . $row['entry_date'] . " - " . $row['entry_text'] . "</span>";
+						echo '</a><br>';
+					}
 				} catch (PDOException $ex) {
-				echo 'Error!: ' . $ex->getMessage();
-				die();
+					echo 'Error!: ' . $ex->getMessage();
+					die();
 				}
 				?>
 
