@@ -100,7 +100,13 @@
                         echo '<img id="journal_page" src="http://www.rubysjournal.com/images/' . $page_image['image_name'] . '" alt=' . '"' . 'Ruby' . '' . 's 1946-1950 journal" />';
                         echo '<br>';
                     }
+                    ?>
 
+                <section>
+                    <table>
+                        <tbody>
+
+                    <?php
                     foreach ($db->query('SELECT
                         journal.journal_name,
                         image.image_name,
@@ -114,17 +120,21 @@
                         INNER JOIN journal
                         ON entry.journal_id = journal.journal_id
                         WHERE journal.journal_name =' . "'1946-1950'" . ';') as $row) {
-                        echo '<br>';
-                        echo '<p id="entryOnPage">' . $row['entry_date'] . ' - ' . $row['entry_text'] . '</p>';
-                        echo '<br>';
+                        echo '<tr>';
+                        echo '<td id="tdDate">' . $row['entry_date'] . '</td>';
+                        echo '<td> "'. $row['entry_text'] . '"</td>';
+                        echo '<tr>';
                     }
                 } catch (PDOException $ex) {
                     echo 'Error!: ' . $ex->getMessage();
                     die();
                 }
                 ?>
+                        </tbody>
+                    </table>
+                </section>
             </div>
         </main>
-                <?php require '../ruby/mod/footer.php'; ?>
+        <?php require '../ruby/mod/footer.php'; ?>
     </body>
 </html>
