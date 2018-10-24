@@ -39,7 +39,7 @@
                         ON entry.image_id = image.image_id
                         INNER JOIN journal
                         ON entry.journal_id = journal.journal_id
-                        WHERE journal.journal_name = ' . "'1951-01-01'" . ' 
+                        WHERE journal.journal_name = ' . "'1946-1950'" . ' 
                         ORDER BY entry.entry_id DESC
                         LIMIT 1 ;') as $page_image) {
                         echo '<br>';
@@ -66,7 +66,7 @@
                                         ON entry.image_id = image.image_id
                                         INNER JOIN journal
                                         ON entry.journal_id = journal.journal_id
-                                        WHERE journal.journal_name =' . "'1946-1950'" . ';') as $row) {
+                                        WHERE entry.page_date =' . "'1946-01-01'" . ';') as $row) {
                                         echo '<tr>';
                                         echo '<td id="tdDate">' . $row['entry_date'] . '</td>';
                                         echo '<td>' . $row['entry_text'] . '</td>';
