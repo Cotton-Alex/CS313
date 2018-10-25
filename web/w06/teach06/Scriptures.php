@@ -56,47 +56,47 @@
 		<hr>
 		<br>
 
-<?php
-$queryString = "select";
-$queryString .= " scripture_id, book, chapter, verse, content";
-$queryString .= " from scriptures";
+		<?php
+		$queryString = "select";
+		$queryString .= " scripture_id, book, chapter, verse, content";
+		$queryString .= " from scriptures";
 
-$query = $db->prepare($queryString);
-$query->execute();
-$results = $query->fetchAll();
+		$query = $db->prepare($queryString);
+		$query->execute();
+		$results = $query->fetchAll();
 
 
 
-foreach ($results as $row) {
-	$queryString = "select t.name from";
-	$queryString .= " scriptures s inner join scripture_topics tp";
-	$queryString .= " on s.scripture_id = tp.scripture_id";
-	$queryString .= " inner join topic t";
-	$queryString .= " on tp.topic_id = t.topic_id";
-	$queryString .= " where s.scripture_id = " . $row["scripture_id"];
+		foreach ($results as $row) {
+			$queryString = "select t.name from";
+			$queryString .= " scriptures s inner join scripture_topics tp";
+			$queryString .= " on s.scripture_id = tp.scripture_id";
+			$queryString .= " inner join topic t";
+			$queryString .= " on tp.topic_id = t.topic_id";
+			$queryString .= " where s.scripture_id = " . $row["scripture_id"];
 
-	$query = $db->prepare($queryString);
-	$query->execute();
-	$topics = $query->fetchAll();
+			$query = $db->prepare($queryString);
+			$query->execute();
+			$topics = $query->fetchAll();
 
-	echo "<button onclick='hide_show(";
-	echo $row['scripture_id'] . ")'>";
-	echo $row["book"] . " " . $row["chapter"] . ":" . $row["verse"];
-	echo "</button><br>";
+			echo "<button onclick='hide_show(";
+			echo $row['scripture_id'] . ")'>";
+			echo $row["book"] . " " . $row["chapter"] . ":" . $row["verse"];
+			echo "</button><br>";
 
-	echo "<div id='" . $row['scripture_id'] . "' class='hidden'>";
-	echo "<p>" . $row["content"] . "</p>";
+			echo "<div id='" . $row['scripture_id'] . "' class='hidden'>";
+			echo "<p>" . $row["content"] . "</p>";
 
-	echo "<ul>";
-	foreach ($topics as $topic) {
-		echo "<li>" . $topic["name"] . "</li>";
-	}
+			echo "<ul>";
+			foreach ($topics as $topic) {
+				echo "<li>" . $topic["name"] . "</li>";
+			}
 
-	echo "</ul>";
+			echo "</ul>";
 
-	echo "</div>";
-}
-?>
+			echo "</div>";
+		}
+		?>
 
 	</body>
 </html>
