@@ -1,6 +1,6 @@
 <form id="date_selector">
 	<span>
-		<select name="date_selector_month">
+		<select name="month">
 			<option value="01">January</option>
 			<option value="02" disabled>February</option>
 			<option value="03" disabled>March</option>
@@ -16,7 +16,7 @@
 		</select> 
 	</span>
 	<span>
-		<select name="date_selector_day">
+		<select name="day">
 			<option value="1">1</option>
 			<option value="2">2</option>
 			<option value="3">3</option>
@@ -51,7 +51,7 @@
 		</select>
 	</span>
 	<span>
-		<select name="date_selector_journal">
+		<select name="journal">
 			<option value="1">1946-1950</option>
 			<option value="2" disabled>1951-1955</option>
 			<option value="3" disabled>1956-1960</option>
