@@ -11,6 +11,9 @@
         </header>
         <main>
             <div class="journal_page_container">
+				
+				<?php require 'date_selector.php'; ?>
+				
 				<?php
 				foreach ($db->query('SELECT
                         journal.journal_name,
