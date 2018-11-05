@@ -374,10 +374,10 @@ ul p {
 }
 /*-------------------------------------JOURNAL PAGES--------------------------*/
 #date_selector {
-	margin-bottom: 20px;
+	margin-bottom: 30px;
 }
 #date_selector_go {
-	width: 15px;
+	width: 30px;
 }
 .journal_page_container{
 	margin-top: 30px;
