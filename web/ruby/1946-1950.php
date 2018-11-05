@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<?php include_once("connect.php"); ?>
 <html lang="en">
     <head>
         <title>Ruby's Journal | Home</title>
@@ -11,23 +12,7 @@
         <main>
             <div class="container">
 				<?php
-				try {
-					$dbUrl = getenv('DATABASE_URL');
-
-					$dbOpts = parse_url($dbUrl);
-
-					$dbHost = $dbOpts["host"];
-					$dbPort = $dbOpts["port"];
-					$dbUser = $dbOpts["user"];
-					$dbPassword = $dbOpts["pass"];
-					$dbName = ltrim($dbOpts["path"], '/');
-
-					$db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
-
-					$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-
-					foreach ($db->query('SELECT
+				foreach ($db->query('SELECT
                         journal.journal_name,
                         image.image_name,
                         entry.page_date, 
@@ -42,19 +27,19 @@
                         WHERE entry.page_date = ' . "'1946-01-01'" . ' 
                         ORDER BY entry.entry_id ASC
                         LIMIT 1 ;') as $page_image) {
-						echo '<br>';
-						echo '<img id="journal_page" src="http://www.rubysjournal.com/images/' . $page_image['image_name'] . '" alt=' . '"' . 'Ruby' . '' . 's 1946-1950 journal" />';
-						echo '<br>';
-					}
-					?>
+					echo '<br>';
+					echo '<img id="journal_page" src="http://www.rubysjournal.com/single_images/' . $page_image['image_name'] . '" alt=' . '"' . 'Ruby' . '' . 's 1946-1950 journal" />';
+					echo '<br>';
+				}
+				?>
 
-					<div id="journal_text">
-						<section>
-							<table>
-								<tbody>
+				<div id="journal_text">
+					<section>
+						<table>
+							<tbody>
 
-									<?php
-									foreach ($db->query('SELECT
+								<?php
+								foreach ($db->query('SELECT
                                         journal.journal_name,
                                         image.image_name,
                                         entry.page_date, 
@@ -67,14 +52,10 @@
                                         INNER JOIN journal
                                         ON entry.journal_id = journal.journal_id
                                         WHERE entry.page_date =' . "'1946-01-01'" . ';') as $row) {
-										echo '<tr>';
-										echo '<td id="tdDate">' . $row['entry_date'] . '</td>';
-										echo '<td>' . $row['entry_text'] . '</td>';
-										echo '<tr>';
-									}
-								} catch (PDOException $ex) {
-									echo 'Error!: ' . $ex->getMessage();
-									die();
+									echo '<tr>';
+									echo '<td id="tdDate">' . $row['entry_date'] . '</td>';
+									echo '<td>' . $row['entry_text'] . '</td>';
+									echo '<tr>';
 								}
 								?>
 
