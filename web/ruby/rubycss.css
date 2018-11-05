@@ -374,9 +374,8 @@ ul p {
 }
 /*-------------------------------------JOURNAL PAGES--------------------------*/
 #journal_page {
-    float:none;
     display: inline-block;
-    width: 825px;
+    width: 500px;
     margin: 0px auto;
     padding: 0px 0px 0px 0px;
     font-family: 'Josefin Slab', serif;
@@ -388,11 +387,11 @@ ul p {
     box-shadow: 0px 0px 15px rgba(0,0,0,.75);
 }
 #journal_text {
-    display: block;
+    display: inline-block;
     width: 450px;
-    margin-top: 30px;
-    margin-left: auto;
+    margin-left: 30px;
     margin-right: auto;
+	margin-bottom: 50px;
     padding: 0px;
     text-align: left;
     vertical-align: text-top;
@@ -405,6 +404,9 @@ ul p {
 table {
     /*border: 1px solid black;*/
     border-collapse: collapse;
+}
+tr {
+	height: 40px;
 }
 td, th {
     /*border: 1px dashed black;*/
