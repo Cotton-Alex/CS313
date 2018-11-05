@@ -373,6 +373,9 @@ ul p {
     color: #000000;
 }
 /*-------------------------------------JOURNAL PAGES--------------------------*/
+.journal_page_container{
+	margin-top: 30px;
+}
 #journal_page {
     display: inline-block;
     width: 500px;

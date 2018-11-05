@@ -10,7 +10,7 @@
 			<?php require '../ruby/mod/header.php'; ?>
         </header>
         <main>
-            <div class="container">
+            <div class="journal_page_container">
 				<?php
 				foreach ($db->query('SELECT
                         journal.journal_name,
