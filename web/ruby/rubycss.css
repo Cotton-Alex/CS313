@@ -373,6 +373,12 @@ ul p {
     color: #000000;
 }
 /*-------------------------------------JOURNAL PAGES--------------------------*/
+#date_selector {
+	margin-bottom: 20px;
+}
+#date_selector_go {
+	width: 15px;
+}
 .journal_page_container{
 	margin-top: 30px;
 }

@@ -71,6 +71,6 @@
 		</select>
 	</span>
 	<span>
-		<input type="submit" name="submit" value="Go">
+		<input id="date_selector_go" type="submit" name="submit" value="Go">
 	</span>
 </form>
