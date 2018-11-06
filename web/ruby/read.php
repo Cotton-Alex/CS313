@@ -3,6 +3,8 @@
 $journal_name = htmlspecialchars($_GET['journal_name']);
 $journal_month = htmlspecialchars($_GET['journal_month']);
 $journal_day = htmlspecialchars($_GET['journal_day']);
+$journal_file_name = ($journal_name . '-' . $journal_month . '-' . $journal_day . '-' . '.jpg');
+echo $journal_file_name;
 ?>
 <html lang="en">
     <head>
@@ -21,7 +23,7 @@ $journal_day = htmlspecialchars($_GET['journal_day']);
 				?>
 				
 				<?php
-				foreach ($db->query('SELECT
+				foreach ($db->query("SELECT
                         journal.journal_name,
                         image.image_name,
                         entry.page_date, 
@@ -33,7 +35,7 @@ $journal_day = htmlspecialchars($_GET['journal_day']);
                         ON entry.image_id = image.image_id
                         INNER JOIN journal
                         ON entry.journal_id = journal.journal_id
-                        WHERE image.image_name = "' . $journal_name . '-' . $journal_month . '-' . $journal_day . '.jpg";')
+                        WHERE image.image_name = '$journal_file_name' ;")
 						as $page_image) {
 					echo '<br>';
 					echo '<img id="journal_page" src="http://www.rubysjournal.com/single_images/' . $page_image['image_name'] . '" alt=' . '"' . 'Ruby' . '' . 's 1946-1950 journal" />';
