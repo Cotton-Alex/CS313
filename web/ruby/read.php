@@ -1,5 +1,9 @@
 <!DOCTYPE html>
-<?php require("connect.php"); ?>
+<?php require("connect.php");
+$journal_name = htmlspecialchars($_GET['journal_name']);
+$journal_month = htmlspecialchars($_GET['journal_month']);
+$journal_day = htmlspecialchars($_GET['journal_day']);
+?>
 <html lang="en">
     <head>
         <title>Ruby's Journal | Home</title>
@@ -12,7 +16,7 @@
         <main>
             <div class="journal_page_container">
 				
-				<?php require 'date_selector.php'; 
+				<?php require 'date_selector.php';
 				
 				?>
 				
@@ -29,9 +33,8 @@
                         ON entry.image_id = image.image_id
                         INNER JOIN journal
                         ON entry.journal_id = journal.journal_id
-                        WHERE entry.image_name = ' . "'1946-1950-01-01.jpg'" . ' 
-                        ORDER BY entry.entry_id ASC
-                        LIMIT 1 ;') as $page_image) {
+                        WHERE image.image_name = "' . $journal_name . '-' . $journal_month . '-' . $journal_day . '.jpg";')
+						as $page_image) {
 					echo '<br>';
 					echo '<img id="journal_page" src="http://www.rubysjournal.com/single_images/' . $page_image['image_name'] . '" alt=' . '"' . 'Ruby' . '' . 's 1946-1950 journal" />';
 				}

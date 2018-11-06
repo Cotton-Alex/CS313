@@ -1,6 +1,6 @@
 <form id="date_selector">
 	<span>
-		<select name="month">
+		<select name="journal_month">
 			<option value="01">January</option>
 			<option value="02" disabled>February</option>
 			<option value="03" disabled>March</option>
@@ -16,16 +16,16 @@
 		</select> 
 	</span>
 	<span>
-		<select name="day">
-			<option value="1">1</option>
-			<option value="2">2</option>
-			<option value="3">3</option>
-			<option value="4">4</option>
-			<option value="5">5</option>
-			<option value="6">6</option>
-			<option value="7">7</option>
-			<option value="8">8</option>
-			<option value="9">9</option>
+		<select name="journal_day">
+			<option value="01">1</option>
+			<option value="02">2</option>
+			<option value="03">3</option>
+			<option value="04">4</option>
+			<option value="05">5</option>
+			<option value="06">6</option>
+			<option value="07">7</option>
+			<option value="08">8</option>
+			<option value="09">9</option>
 			<option value="10">10</option>
 			<option value="11">11</option>
 			<option value="12">12</option>
@@ -51,23 +51,23 @@
 		</select>
 	</span>
 	<span>
-		<select name="journal">
-			<option value="1">1946-1950</option>
-			<option value="2" disabled>1951-1955</option>
-			<option value="3" disabled>1956-1960</option>
-			<option value="4" disabled>1961-1965</option>
-			<option value="5" disabled>1966-1968</option>
-			<option value="6" disabled>1969-1973</option>
-			<option value="7" disabled>1975-1978</option>
-			<option value="8" disabled>1979-1981</option>
-			<option value="9" disabled>1982-1984</option>
-			<option value="10" disabled>1985-1987</option>
-			<option value="11" disabled>1988</option>
-			<option value="12" disabled>1989</option>
-			<option value="13" disabled>1990</option>
-			<option value="14" disabled>1991</option>
-			<option value="15" disabled>1992-1993</option>
-			<option value="16" disabled>1994</option>
+		<select name="journal_name">
+			<option value="1946-1950">1946-1950</option>
+			<option value="1951-1955" disabled>1951-1955</option>
+			<option value="1956-1960" disabled>1956-1960</option>
+			<option value="1961-1965" disabled>1961-1965</option>
+			<option value="1966-1968" disabled>1966-1968</option>
+			<option value="1969-1973" disabled>1969-1973</option>
+			<option value="1975-1978" disabled>1975-1978</option>
+			<option value="1979-1981" disabled>1979-1981</option>
+			<option value="1982-1984" disabled>1982-1984</option>
+			<option value="1985-1987" disabled>1985-1987</option>
+			<option value="1988" disabled>1988</option>
+			<option value="1989" disabled>1989</option>
+			<option value="1990" disabled>1990</option>
+			<option value="1991" disabled>1991</option>
+			<option value="1992-1993" disabled>1992-1993</option>
+			<option value="1994" disabled>1994</option>
 		</select>
 	</span>
 	<span>
