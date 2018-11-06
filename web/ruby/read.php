@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<?php include_once("connect.php"); ?>
+<?php require("connect.php"); ?>
 <html lang="en">
     <head>
         <title>Ruby's Journal | Home</title>
@@ -12,7 +12,9 @@
         <main>
             <div class="journal_page_container">
 				
-				<?php require 'date_selector.php'; ?>
+				<?php require 'date_selector.php'; 
+				
+				?>
 				
 				<?php
 				foreach ($db->query('SELECT
@@ -27,7 +29,7 @@
                         ON entry.image_id = image.image_id
                         INNER JOIN journal
                         ON entry.journal_id = journal.journal_id
-                        WHERE entry.page_date = ' . "'1946-01-01'" . ' 
+                        WHERE entry.image_name = ' . "'1946-1950-01-01.jpg'" . ' 
                         ORDER BY entry.entry_id ASC
                         LIMIT 1 ;') as $page_image) {
 					echo '<br>';

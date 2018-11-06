@@ -1,4 +1,18 @@
 <!DOCTYPE html>
+<?php
+require('connect.php');
+
+$query = 'SELECT journal_id, journal_name FROM journal';
+$stmt = $db->prepare($query);
+$stmt->execute();
+$journals = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+foreach ($journals as $journal) {
+	$id = $journal['id'];
+	$name = $journal['name'];
+}
+
+?>
 <html lang="en">
     <head>
         <title>Ruby's Journal | Home</title>
@@ -11,7 +25,7 @@
         <main>
             <div id="journal_covers">
                 <!--Working Journal Covers-->
-                <figure> <a href="read/?action=1946-1950" name="1956-1950"><img src="http://www.rubysjournal.com/images/1946-1950-001-258x300.jpg" alt="Ruby's 1946-1950 journal" /> </a>
+                <figure> <a href="read.php?journal_id=1" name="1956-1950"><img src="http://www.rubysjournal.com/images/1946-1950-001-258x300.jpg" alt="Ruby's 1946-1950 journal" /> </a>
                     <figcaption>1946-1950</figcaption>
                 </figure>
                 <figure> <!--<a href="read/?action=1951-1955">--> <img src="http://www.rubysjournal.com/images/1951-1955-001-246x300.jpg" alt="Ruby's 1951-1955 Journal" />
