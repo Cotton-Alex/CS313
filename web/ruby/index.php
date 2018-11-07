@@ -25,7 +25,7 @@ foreach ($journals as $journal) {
         <main>
             <div id="journal_covers">
                 <!--Working Journal Covers-->
-                <figure> <a href="read.php?journal_month=01&journal_day=1&journal_name=1" name="1956-1950"><img src="http://www.rubysjournal.com/images/1946-1950-001-258x300.jpg" alt="Ruby's 1946-1950 journal" /> </a>
+                <figure> <a href="read.php?journal_month=01&journal_day=01&journal_name=1946-1950" name="1946-1950"><img src="http://www.rubysjournal.com/images/1946-1950-001-258x300.jpg" alt="Ruby's 1946-1950 journal" /> </a>
                     <figcaption>1946-1950</figcaption>
                 </figure>
                 <figure> <!--<a href="read/?action=1951-1955">--> <img src="http://www.rubysjournal.com/images/1951-1955-001-246x300.jpg" alt="Ruby's 1951-1955 Journal" />
