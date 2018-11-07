@@ -5,7 +5,7 @@
             <div id="nav_container">
                 <nav>
                     <ul>
-                        <li><a href="https://cotton-app.herokuapp.com/ruby/index.php">Journals</a></li>
+                        <li><a href="https://cotton-app.herokuapp.com/ruby/read.php?journal_month=<?php echo $_SESSION['journal_month'] ?>&journal_day=<?php echo $_SESSION['journal_day'] ?>&journal_name=<?php echo $_SESSION['journal_name'] ?>&submit=Go"">Read</a></li>
 <!--                        <li>
                             <div class="dropdown">
                                 <a class="dropbtn" href="../index.php">Journals</a>

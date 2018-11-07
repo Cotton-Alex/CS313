@@ -34,10 +34,9 @@ function add_entry($journal_id, $image_id, $entry_date, $entry_text) {
         <main>
             <div class="journal_page_container">
 
-                <?php
-                require 'date_selector.php';
+                <?php require 'date_selector.php'; ?>
 
-                foreach ($db->query('SELECT
+                <?php foreach ($db->query('SELECT
                 journal.journal_name,
                 image.image_name,
                 entry.page_date,
@@ -66,8 +65,7 @@ function add_entry($journal_id, $image_id, $entry_date, $entry_text) {
                 <div id="journal_text"> 
                     <h3>Add Journal Entry</h3>
                     <form method="post" action="insert_text.php">
-                        <input type="hidden" name="journal_name" value="<?php echo $journal_name
-                ?>">
+                        <input type="hidden" name="journal_name" value="<?php echo $journal_name ?>">
                         <input type="hidden" name="journal_month" value="<?php echo $journal_month ?>">
                         <input type="hidden" name="journal_day" value="<?php echo $journal_day ?>">
                         <br>
