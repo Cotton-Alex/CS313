@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <?php
 require("connect.php");
@@ -18,30 +19,8 @@ $journal_file_name = ($journal_name . '-' . $journal_month . '-' . $journal_day 
         <main>
             <div class="journal_page_container">
 
-				<?php require 'date_selector.php';
-				?>
-
-				<?php
-//				foreach ($db->query("SELECT
-//                        journal.journal_name,
-//                        image.image_name,
-//                        entry.page_date, 
-//                        entry.image_id, 
-//                        entry.entry_date, 
-//                        entry.entry_text
-//                        FROM entry
-//                        INNER JOIN image
-//                        ON entry.image_id = image.image_id
-//                        INNER JOIN journal
-//                        ON entry.journal_id = journal.journal_id
-//                        WHERE image.image_name = '1946-1950-01-05.jpg'
-//                        ORDER BY image.image_id ASC
-//                        LIMIT 1 ;") as $page_image) {
-//					echo '<br>';
-//					echo '<img id="journal_page" src="http://www.rubysjournal.com/single_images/' . $page_image['image_name'] . '" alt=' . '"' . 'Ruby' . '' . 's 1946-1950 journal" />';
-//				}
-				?>
-				
+				<?php require 'date_selector.php'; ?>
+			
 				<?php
 					echo '<br>';
 					echo '<img id="journal_page" src="http://www.rubysjournal.com/single_images/' . $journal_file_name . '" alt=RubysJournal" />';

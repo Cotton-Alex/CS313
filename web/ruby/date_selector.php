@@ -1,7 +1,9 @@
 <form id="date_selector">
 	<span>
-		<select name="journal_month">
-			<option value="01">January</option>
+		<select name="journal_month" id="journal_month">
+			<option value="01" <?php if ($_SESSION['journal_month'] == "01") {
+	echo ' selected';
+} ?> >January</option>
 			<option value="02" disabled>February</option>
 			<option value="03" disabled>March</option>
 			<option value="04" disabled>April</option>
@@ -16,10 +18,16 @@
 		</select> 
 	</span>
 	<span>
-		<select name="journal_day">
-			<option value="01">1</option>
-			<option value="02">2</option>
-			<option value="03">3</option>
+		<select name="journal_day" id="journal_day">
+			<option value="01" <?php if ($_SESSION['journal_day'] == "01") {
+	echo ' selected';
+} ?> >1</option>
+			<option value="02" <?php if ($_SESSION['journal_day'] == "02") {
+	echo ' selected';
+} ?> >2</option>
+			<option value="03" <?php if ($_SESSION['journal_day'] == "03") {
+	echo ' selected';
+} ?> >3</option>
 			<option value="04">4</option>
 			<option value="05">5</option>
 			<option value="06">6</option>
@@ -51,8 +59,10 @@
 		</select>
 	</span>
 	<span>
-		<select name="journal_name">
-			<option value="1946-1950">1946-1950</option>
+		<select name="journal_name" id="journal_name">
+			<option value="1946-1950" <?php if ($_SESSION['journal_name'] == "1946-1950") {
+	echo ' selected';
+} ?> >1946-1950</option>
 			<option value="1951-1955" disabled>1951-1955</option>
 			<option value="1956-1960" disabled>1956-1960</option>
 			<option value="1961-1965" disabled>1961-1965</option>
@@ -71,6 +81,17 @@
 		</select>
 	</span>
 	<span>
-		<input id="date_selector_go" type="submit" name="submit" value="Go">
+		<input id="date_selector" type="submit" name="submit" value="Go">
+		<?php
+		if (isset($_POST['journal_name'])) {
+			$_SESSION['journal_name'] = $_POST['journal_name'];
+		}
+		if (isset($_POST['journal_month'])) {
+			$_SESSION['journal_month'] = $_POST['journal_month'];
+		}
+		if (isset($_POST['journal_day'])) {
+			$_SESSION['journal_day'] = $_POST['journal_day'];
+		}
+		?>
 	</span>
 </form>
