@@ -75,13 +75,13 @@
 		<input id="date_selector_go" type="submit" name="submit" value="Go">
 		<?php
 		//if (isset($_POST['journal_name'])) {
-			$_SESSION['journal_name'] = $_GET['journal_name'];
+			//$_SESSION['journal_name'] = $_GET['journal_name'];
 		//}
 		//if (isset($_POST['journal_month'])) {
-			$_SESSION['journal_month'] = $_GET['journal_month'];
+			//$_SESSION['journal_month'] = $_GET['journal_month'];
 		//}
 		//if (isset($_POST['journal_day'])) {
-			$_SESSION['journal_day'] = $_GET['journal_day'];
+			//$_SESSION['journal_day'] = $_GET['journal_day'];
 		//}
 		?>
 	</span>
