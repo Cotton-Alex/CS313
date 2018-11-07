@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <?php
 require("connect.php");
+require("date_session.php");
 $journal_name = htmlspecialchars($_GET['journal_name']);
 $journal_month = htmlspecialchars($_GET['journal_month']);
 $journal_day = htmlspecialchars($_GET['journal_day']);
