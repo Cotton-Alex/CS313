@@ -21,7 +21,7 @@ $journal_file_name = ($journal_name . '-' . $journal_month . '-' . $journal_day 
 				<?php require 'date_selector.php';
 				?>
 
-				//<?php
+				<?php
 //				foreach ($db->query("SELECT
 //                        journal.journal_name,
 //                        image.image_name,
@@ -34,13 +34,13 @@ $journal_file_name = ($journal_name . '-' . $journal_month . '-' . $journal_day 
 //                        ON entry.image_id = image.image_id
 //                        INNER JOIN journal
 //                        ON entry.journal_id = journal.journal_id
-//                        WHERE image.image_name = '$journal_file_name'
+//                        WHERE image.image_name = '1946-1950-01-05.jpg'
 //                        ORDER BY image.image_id ASC
 //                        LIMIT 1 ;") as $page_image) {
-//					echo '<br>';
-//					echo '<img id="journal_page" src="http://www.rubysjournal.com/single_images/' . $page_image['image_name'] . '" alt=' . '"' . 'Ruby' . '' . 's 1946-1950 journal" />';
+					echo '<br>';
+					echo '<img id="journal_page" src="http://www.rubysjournal.com/single_images/' . $page_image['image_name'] . '" alt=' . '"' . 'Ruby' . '' . 's 1946-1950 journal" />';
 //				}
-//				?>
+				?>
 				
 				<?php
 					echo '<br>';
@@ -65,7 +65,7 @@ $journal_file_name = ($journal_name . '-' . $journal_month . '-' . $journal_day 
                                         ON entry.image_id = image.image_id
                                         INNER JOIN journal
                                         ON entry.journal_id = journal.journal_id
-                                        WHERE entry.page_date =' . "'1946-01-01'" . ';') as $row) {
+                                        WHERE image.image.name =' . $journal_file_name . ';') as $row) {
 									echo '<tr>';
 									echo '<td id="tdDate">' . $row['entry_date'] . '</td>';
 									echo '<td>' . $row['entry_text'] . '</td>';
