@@ -1,9 +1,26 @@
 <form id="date_selector">
+	<?php
+	if (!isset($GET['journal_month'])) {
+		$journal_month = ("01");
+	}
+	$journal_month = htmlspecialchars($GET['journal_month']);
+	$_SESSION['journal_month'] = $journal_month;
+	
+	if (!isset($GET['journal_day'])) {
+		$journal_day = ("01");
+	}
+	$journal_day = htmlspecialchars($GET['journal_day']);
+	$_SESSION['journal_day'] = $journal_day;
+	
+	if (!isset($GET['journal_name'])) {
+		$journal_name = ("1946-1950");
+	}
+	$journal_name = htmlspecialchars($GET['journal_name']);
+	$_SESSION['journal_name'] = $journal_name;
+	?>
 	<span>
 		<select name="journal_month" id="journal_month">
-			<option value="01" <?php if ($_SESSION['journal_month'] == "01") {
-	echo ' selected';
-} ?> >January</option>
+			<option value="01" <?php if ($_SESSION['journal_month'] == "01") { echo ' selected';} ?> >January</option>
 			<option value="02" disabled>February</option>
 			<option value="03" disabled>March</option>
 			<option value="04" disabled>April</option>
@@ -19,9 +36,9 @@
 	</span>
 	<span>
 		<select name="journal_day" id="journal_day">
-			<option value="01" <?php if ($_SESSION['journal_day'] == "01") {echo ' selected';?> >1</option>
-			<option value="02" <?php if ($_SESSION['journal_day'] == "02") {echo ' selected';?> >2</option>
-			<option value="03" <?php if ($_SESSION['journal_day'] == "03") {echo ' selected';?> >3</option>
+			<option value="01" <?php if ($_SESSION['journal_day'] == "01") { echo ' selected';} ?> >1</option>
+			<option value="02" <?php if ($_SESSION['journal_day'] == "02") { echo ' selected';} ?> >2</option>
+			<option value="03" <?php if ($_SESSION['journal_day'] == "03") { echo ' selected';} ?> >3</option>
 			<option value="04">4</option>
 			<option value="05">5</option>
 			<option value="06">6</option>
