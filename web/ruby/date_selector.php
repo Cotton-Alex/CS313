@@ -1,4 +1,4 @@
-<form action="" id="date_selector" method="get">
+<form action="date_session.php" id="date_selector" method="get">
 	<?php require('date_session.php'); ?>
 	<span>
 		<select name="journal_month" id="journal_month">
