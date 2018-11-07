@@ -19,5 +19,6 @@ if (!isset($_SESSION['journal_name'])) {
 }
 
 echo "get " . $_GET['journal_day'] . '<br>';
+echo "post " . $_POST['journal_day'] . '<br>';
 echo "session " . $_SESSION['journal_day'] . '<br>';
 ?>
