@@ -1,25 +1,25 @@
 <form id="date_selector">
 	<?php
-	if (!isset($POST['journal_month'])) {
+	if (!isset($GET['journal_month'])) {
 		$journal_month = ("01");
 		echo $journal_month;
-	}else{ $journal_month = htmlspecialchars($POST['journal_month']);
+	}else{ $journal_month = htmlspecialchars($GET['journal_month']);
 	echo "journal_month " . $journal_month;
 	}
 	$_SESSION['journal_month'] = $journal_month;
 	
-	if (!isset($POST['journal_day'])) {
+	if (!isset($GET['journal_day'])) {
 		$journal_day = ("01");
 		echo $journal_day;
-	}else{ $journal_day = htmlspecialchars($POST['journal_day']);
+	}else{ $journal_day = htmlspecialchars($GET['journal_day']);
 	echo $journal_day;
 	}
 	$_SESSION['journal_day'] = $journal_day;
 	
-	if (!isset($POST['journal_name'])) {
+	if (!isset($GET['journal_name'])) {
 		$journal_name = ("1946-1950");
 		echo $journal_name;
-	}else{ $journal_name = htmlspecialchars($POST['journal_name']);
+	}else{ $journal_name = htmlspecialchars($GET['journal_name']);
 	echo $journal_name;
 	}
 	$_SESSION['journal_name'] = $journal_name;
