@@ -1,8 +1,9 @@
+<?php session_start() ?>
 <form id="date_selector">
 	<?php
 	if (!isset($GET['journal_month'])) {
 		$journal_month = ("01");
-		echo $journal_month;
+		echo "journal_month !isset " . $journal_month;
 	}else{ $journal_month = htmlspecialchars($GET['journal_month']);
 	echo "journal_month " . $journal_month;
 	}
