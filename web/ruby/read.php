@@ -19,7 +19,7 @@ $journal_file_name = ($journal_name . '-' . $journal_month . '-' . $journal_day 
         <main>
             <div class="journal_page_container">
 
-				<?php //require 'date_selector.php'; ?>
+				<?php require 'date_selector.php'; ?>
 			
 				<?php
 					echo '<br>';
