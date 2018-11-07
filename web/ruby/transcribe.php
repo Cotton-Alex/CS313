@@ -8,20 +8,6 @@ $journal_month = htmlspecialchars($_GET['journal_month']);
 $journal_day = htmlspecialchars($_GET['journal_day']);
 $image_file_name = ($journal_name . '-' . $journal_month . '-' . $journal_day . '.jpg');
 
-function add_entry($journal_id, $image_id, $entry_date, $entry_text) {
-    global $db;
-    $query = 'INSERT INTO entry
-                 ($journal_id, $imageID, $pageSideID, $entryDate, $entryData)
-              VALUES
-                 (:journal_id, :imageID, :pageSideID, :entryDate, :entryData)';
-    $statement = $db->prepare($query);
-    $statement->bindValue(':journal_id', $journal_id);
-    $statement->bindValue(':image_id', $image_id);
-    $statement->bindValue(':entry_date', $entry_date);
-    $statement->bindValue(':entry_text', $entry_text);
-    $statement->execute();
-    $statement->closeCursor();
-}
 ?>
 <html lang="en">
     <head>
@@ -69,19 +55,11 @@ function add_entry($journal_id, $image_id, $entry_date, $entry_text) {
                         <input type="hidden" name="journal_name" value="<?php echo $journal_name ?>">
                         <input type="hidden" name="journal_month" value="<?php echo $journal_month ?>">
                         <input type="hidden" name="journal_day" value="<?php echo $journal_day ?>">
-                        <br>
-                        <label>Journal:</label>
-                        <select class="transcribeJournalId" name="journal_id">
-                            <?php foreach ($journal_names as $journal_name) : ?>
-                                <option value="<?php echo $journal_name['journal_id']; ?>">
-                                    <?php echo $journal_name['journal_name']; ?>
-                                </option>
-                            <?php endforeach; ?>
-                        </select>
                         <input type="hidden" value="imageID" name="imageID" />
                         <input type="hidden" value="2" name="pageSideID" />
+                        <br>
                         <label class="labelDate">Date:</label>
-                        <input class="inputDate" type="date" name="entryDate" />
+                        <input class="inputDate" type="date" name="entryDate" value="<?php echo $row['image.page_date'] ?>" />
                         <br>
 
                         <!--<label>Entry:</label>-->
