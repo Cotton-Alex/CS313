@@ -19,15 +19,9 @@
 	</span>
 	<span>
 		<select name="journal_day" id="journal_day">
-			<option value="01" <?php if ($_SESSION['journal_day'] == "01") {
-	echo ' selected';
-} ?> >1</option>
-			<option value="02" <?php if ($_SESSION['journal_day'] == "02") {
-	echo ' selected';
-} ?> >2</option>
-			<option value="03" <?php if ($_SESSION['journal_day'] == "03") {
-	echo ' selected';
-} ?> >3</option>
+			<option value="01" <?php if ($_SESSION['journal_day'] == "01") {echo ' selected';?> >1</option>
+			<option value="02" <?php if ($_SESSION['journal_day'] == "02") {echo ' selected';?> >2</option>
+			<option value="03" <?php if ($_SESSION['journal_day'] == "03") {echo ' selected';?> >3</option>
 			<option value="04">4</option>
 			<option value="05">5</option>
 			<option value="06">6</option>
@@ -60,9 +54,7 @@
 	</span>
 	<span>
 		<select name="journal_name" id="journal_name">
-			<option value="1946-1950" <?php if ($_SESSION['journal_name'] == "1946-1950") {
-	echo ' selected';
-} ?> >1946-1950</option>
+			<option value="1946-1950" <?php if ($_SESSION['journal_name'] == "1946-1950") {echo ' selected';} ?> >1946-1950</option>
 			<option value="1951-1955" disabled>1951-1955</option>
 			<option value="1956-1960" disabled>1956-1960</option>
 			<option value="1961-1965" disabled>1961-1965</option>
@@ -81,7 +73,7 @@
 		</select>
 	</span>
 	<span>
-		<input id="date_selector" type="submit" name="submit" value="Go">
+		<input id="date_selector_go" type="submit" name="submit" value="Go">
 		<?php
 		if (isset($_POST['journal_name'])) {
 			$_SESSION['journal_name'] = $_POST['journal_name'];
