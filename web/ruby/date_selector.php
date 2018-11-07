@@ -16,8 +16,8 @@
 	}else{ $_SESSION['journal_name'] = htmlspecialchars($GET['journal_name']);
 	}
 	
-	echo $GET['journal_name'];
-	echo $_SESSION['journal_name'];
+	echo "get " . $GET['journal_name'] . '<br>';
+	echo "session " . $_SESSION['journal_name'] . '<br>';
 	?>
 	<span>
 		<select name="journal_month" id="journal_month">
