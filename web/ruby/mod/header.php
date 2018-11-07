@@ -19,7 +19,7 @@
                                 </div>
                             </div>
                         </li>-->
-                        <li><a href="https://cotton-app.herokuapp.com/ruby/transcribe.php?journal_month=<?php echo $_SESSION['journal_month'] ?>&journal_day=<?php echo $_SESSION['journal_day'] ?>&journal_name=<?php echo $_SESSION['journal_name'] ?>&submit=Go>Transcribe</a></li>
+                        <li><a href="https://cotton-app.herokuapp.com/ruby/transcribe.php?journal_month=<?php echo $_SESSION['journal_month'] ?>&journal_day=<?php echo $_SESSION['journal_day'] ?>&journal_name=<?php echo $_SESSION['journal_name'] ?>&submit=Go">Transcribe</a></li>
                         <li><a href="https://cotton-app.herokuapp.com/rubyabout.php">About</a></li>
                     </ul>
                 </nav>
