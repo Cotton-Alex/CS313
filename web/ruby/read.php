@@ -40,6 +40,7 @@ echo $journal_file_name;
 					echo '<br>';
 					echo '<img id="journal_page" src="http://www.rubysjournal.com/single_images/' . $page_image['image_name'] . '" alt=' . '"' . 'Ruby' . '' . 's 1946-1950 journal" />';
 				}
+                                echo $journal_file_name;
 				?>
 
 				<div id="journal_text">
