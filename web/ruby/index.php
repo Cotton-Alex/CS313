@@ -3,20 +3,15 @@
 <?php
 require('connect.php');
 
-
 	if (!isset($_SESSION['journal_month'])) {
 		$_SESSION['journal_month'] = "01";
 	}
 	if (!isset($_SESSION['journal_day'])) {
 		$_SESSION['journal_day'] = "01";
 	}
-
-	if (!isset($_SESSION['journal_name'])) {
-		$_SESSION['journal_name'] = ("1946-1950");
-	}
 	
-	echo "get " . $_GET['journal_day'] . '<br>';
-	echo "session " . $_SESSION['journal_day'] . '<br>';
+	//echo "get " . $_GET['journal_day'] . '<br>';
+	//echo "session " . $_SESSION['journal_day'] . '<br>';
 
 
 //$query = 'SELECT journal_id, journal_name FROM journal';
