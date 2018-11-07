@@ -1,5 +1,4 @@
 <form action="" id="date_selector" method="get">
-	<?php require('date_session.php'); ?>
 	<span>
 		<select name="journal_month" id="journal_month">
 			<option value="01" <?php if ($_SESSION['journal_month'] == "01") { echo ' selected';} ?> >January</option>
