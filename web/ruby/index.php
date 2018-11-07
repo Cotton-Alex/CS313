@@ -2,7 +2,22 @@
 <!DOCTYPE html>
 <?php
 require('connect.php');
-require('date_session.php');
+
+
+	if (!isset($_SESSION['journal_month'])) {
+		$_SESSION['journal_month'] = "01";
+	}
+	if (!isset($_SESSION['journal_day'])) {
+		$_SESSION['journal_day'] = "01";
+	}
+
+	if (!isset($_SESSION['journal_name'])) {
+		$_SESSION['journal_name'] = ("1946-1950");
+	}
+	
+	echo "get " . $_GET['journal_day'] . '<br>';
+	echo "session " . $_SESSION['journal_day'] . '<br>';
+
 
 //$query = 'SELECT journal_id, journal_name FROM journal';
 //$stmt = $db->prepare($query);
@@ -30,7 +45,7 @@ require('date_session.php');
 				echo "session " . $_SESSION['journal_day'] . '<br>';
 				?>
                 <!--Working Journal Covers-->
-                <figure> <a href="read.php?journal_month=<?php echo $_GET['journal_month'] ?>&journal_day=<?php echo $_GET['journal_day'] ?>&journal_name=1946-1950" name="1946-1950"><img src="http://www.rubysjournal.com/images/1946-1950-001-258x300.jpg" alt="Ruby's 1946-1950 journal" /> </a>
+                <figure> <a href="read.php?journal_month=<?php echo $_SESSION['journal_month'] ?>&journal_day=<?php echo $_SESSION['journal_day'] ?>&journal_name=1946-1950" name="1946-1950"><img src="http://www.rubysjournal.com/images/1946-1950-001-258x300.jpg" alt="Ruby's 1946-1950 journal" /> </a>
                     <figcaption>1946-1950</figcaption>
                 </figure>
                 <figure> <!--<a href="read/?action=1951-1955">--> <img src="http://www.rubysjournal.com/images/1951-1955-001-246x300.jpg" alt="Ruby's 1951-1955 Journal" />
