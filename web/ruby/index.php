@@ -1,4 +1,4 @@
-<?php session_start()?>
+<?php session_start() ?>
 <!DOCTYPE html>
 <?php
 require('connect.php');
@@ -13,7 +13,6 @@ foreach ($journals as $journal) {
 	$id = $journal['id'];
 	$name = $journal['name'];
 }
-
 ?>
 <html lang="en">
     <head>
@@ -26,6 +25,10 @@ foreach ($journals as $journal) {
         </header>
         <main>
             <div id="journal_covers">
+				<?php
+				echo "get " . $_GET['journal_day'] . '<br>';
+				echo "session " . $_SESSION['journal_day'] . '<br>';
+				?>
                 <!--Working Journal Covers-->
                 <figure> <a href="read.php?journal_month=<?php echo $_SESSION['journal_month'] ?>&journal_day=<?php echo $_SESSION['journal_day'] ?>&journal_name=1946-1950" name="1946-1950"><img src="http://www.rubysjournal.com/images/1946-1950-001-258x300.jpg" alt="Ruby's 1946-1950 journal" /> </a>
                     <figcaption>1946-1950</figcaption>
