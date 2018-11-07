@@ -2,28 +2,19 @@
 <form id="date_selector">
 	<?php
 	if (!isset($GET['journal_month'])) {
-		$journal_month = ("01");
-		echo 'journal_month !isset ' . $journal_month . '<br>';
-	}else{ $journal_month = htmlspecialchars($GET['journal_month']);
-	echo "journal_month " . $journal_month;
+		$_SESSION['journal_month'] = "01";
+	}else{ $_SESSION['journal_month'] = htmlspecialchars($GET['journal_month']);
 	}
-	$_SESSION['journal_month'] = $journal_month;
 	
 	if (!isset($GET['journal_day'])) {
-		$journal_day = ("01");
-		echo $journal_day;
-	}else{ $journal_day = htmlspecialchars($GET['journal_day']);
-	echo $journal_day;
+		$_SESSION['journal_day'] = "01";
+	}else{ $_SESSION['journal_day'] = htmlspecialchars($GET['journal_day']);
 	}
-	$_SESSION['journal_day'] = $journal_day;
 	
 	if (!isset($GET['journal_name'])) {
-		$journal_name = ("1946-1950");
-		echo $journal_name;
-	}else{ $journal_name = htmlspecialchars($GET['journal_name']);
-	echo $journal_name;
+		$_SESSION['journal_name'] = ("1946-1950");
+	}else{ $_SESSION['journal_name'] = htmlspecialchars($GET['journal_name']);
 	}
-	$_SESSION['journal_name'] = $journal_name;
 	?>
 	<span>
 		<select name="journal_month" id="journal_month">
@@ -100,13 +91,13 @@
 		<input id="date_selector_go" type="submit" name="submit" value="Go">
 		<?php
 		//if (isset($_POST['journal_name'])) {
-			$_SESSION['journal_name'] = $GET['journal_name.value'];
+			//$_SESSION['journal_name'] = $GET['journal_name'];
 		//}
 		//if (isset($_POST['journal_month'])) {
-			$_SESSION['journal_month'] = $GET['journal_month.value'];
+			//$_SESSION['journal_month'] = $GET['journal_month'];
 		//}
 		//if (isset($_POST['journal_day'])) {
-			$_SESSION['journal_day'] = $GET['journal_day.value'];
+			//$_SESSION['journal_day'] = $GET['journal_day'];
 		//}
 		?>
 	</span>
