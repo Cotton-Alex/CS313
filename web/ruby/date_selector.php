@@ -1,29 +1,10 @@
-<?php session_start() ?>
 <form id="date_selector">
-	<?php
-	if (!isset($_SESSION['journal_month'])) {
-		$_SESSION['journal_month'] = "01";
-	}else{ $_SESSION['journal_month'] = htmlspecialchars($_GET['journal_month']);
-	}
-	
-	if (!isset($_SESSION['journal_day'])) {
-		$_SESSION['journal_day'] = "01";
-	}else{ $_SESSION['journal_day'] = htmlspecialchars($_GET['journal_day']);
-	}
-	
-	if (!isset($_SESSION['journal_name'])) {
-		$_SESSION['journal_name'] = ("1946-1950");
-	}else{ $_SESSION['journal_name'] = htmlspecialchars($_GET['journal_name']);
-	}
-	
-	echo "get " . $_GET['journal_name'] . '<br>';
-	echo "session " . $_SESSION['journal_name'] . '<br>';
-	?>
+	<?php require('date_session.php'); ?>
 	<span>
 		<select name="journal_month" id="journal_month">
 			<option value="01" <?php if ($_SESSION['journal_month'] == "01") { echo ' selected';} ?> >January</option>
-			<option value="02" <?php if ($_SESSION['journal_month'] == "02") { echo ' selected';} ?> >February</option>
-			<option value="03" <?php if ($_SESSION['journal_month'] == "03") { echo ' selected';} ?> >March</option>
+			<option value="02" disabled>February</option>
+			<option value="03" disabled>March</option>
 			<option value="04" disabled>April</option>
 			<option value="05" disabled>May</option>
 			<option value="06" disabled>June</option>
@@ -73,8 +54,8 @@
 	<span>
 		<select name="journal_name" id="journal_name">
 			<option value="1946-1950" <?php if ($_SESSION['journal_name'] == "1946-1950") {echo ' selected';} ?> >1946-1950</option>
-			<option value="1951-1955" <?php if ($_SESSION['journal_name'] == "1951-1955") {echo ' selected';} ?> >1951-1955</option>
-			<option value="1956-1960" <?php if ($_SESSION['journal_name'] == "1956-1960") {echo ' selected';} ?> >1956-1960</option>
+			<option value="1951-1955" disabled>1951-1955</option>
+			<option value="1956-1960" disabled>1956-1960</option>
 			<option value="1961-1965" disabled>1961-1965</option>
 			<option value="1966-1968" disabled>1966-1968</option>
 			<option value="1969-1973" disabled>1969-1973</option>
