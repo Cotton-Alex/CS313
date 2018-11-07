@@ -40,7 +40,7 @@ require('connect.php');
 				echo "session " . $_SESSION['journal_day'] . '<br>';
 				?>
                 <!--Working Journal Covers-->
-                <figure> <a href="read.php?journal_month=<?php echo $_SESSION['journal_month'] ?>&journal_day=<?php echo $_SESSION['journal_day'] ?>&journal_name=1946-1950" name="1946-1950"><img src="http://www.rubysjournal.com/images/1946-1950-001-258x300.jpg" alt="Ruby's 1946-1950 journal" /> </a>
+                <figure> <a href="read.php?journal_month=<?php echo $_SESSION['journal_month'] ?>&journal_day=<?php echo $_SESSION['journal_day'] ?>&journal_name=1946-1950&submit=Go" name="1946-1950"><img src="http://www.rubysjournal.com/images/1946-1950-001-258x300.jpg" alt="Ruby's 1946-1950 journal" /> </a>
                     <figcaption>1946-1950</figcaption>
                 </figure>
                 <figure> <!--<a href="read/?action=1951-1955">--> <img src="http://www.rubysjournal.com/images/1951-1955-001-246x300.jpg" alt="Ruby's 1951-1955 Journal" />
