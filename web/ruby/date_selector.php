@@ -2,17 +2,26 @@
 	<?php
 	if (!isset($GET['journal_month'])) {
 		$journal_month = ("01");
-	}else{ $journal_month = htmlspecialchars($GET['journal_month']);}
+		echo $journal_month;
+	}else{ $journal_month = htmlspecialchars($GET['journal_month']);
+	echo $journal_month;
+	}
 	$_SESSION['journal_month'] = $journal_month;
 	
 	if (!isset($GET['journal_day'])) {
 		$journal_day = ("01");
-	}else{ $journal_day = htmlspecialchars($GET['journal_day']);}
+		echo $journal_day;
+	}else{ $journal_day = htmlspecialchars($GET['journal_day']);
+	echo $journal_day;
+	}
 	$_SESSION['journal_day'] = $journal_day;
 	
 	if (!isset($GET['journal_name'])) {
 		$journal_name = ("1946-1950");
-	}else{ $journal_name = htmlspecialchars($GET['journal_name']);}
+		echo $journal_name;
+	}else{ $journal_name = htmlspecialchars($GET['journal_name']);
+	echo $journal_name;
+	}
 	$_SESSION['journal_name'] = $journal_name;
 	?>
 	<span>
