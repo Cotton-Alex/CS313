@@ -15,6 +15,9 @@
 		$_SESSION['journal_name'] = ("1946-1950");
 	}else{ $_SESSION['journal_name'] = htmlspecialchars($GET['journal_name']);
 	}
+	
+	echo $GET['journal_name'];
+	echo $_SESSION['journal_name'];
 	?>
 	<span>
 		<select name="journal_month" id="journal_month">
@@ -91,13 +94,13 @@
 		<input id="date_selector_go" type="submit" name="submit" value="Go">
 		<?php
 		//if (isset($_POST['journal_name'])) {
-			//$_SESSION['journal_name'] = $GET['journal_name'];
+			$_SESSION['journal_name'] = $GET['journal_name'];
 		//}
 		//if (isset($_POST['journal_month'])) {
-			//$_SESSION['journal_month'] = $GET['journal_month'];
+			$_SESSION['journal_month'] = $GET['journal_month'];
 		//}
 		//if (isset($_POST['journal_day'])) {
-			//$_SESSION['journal_day'] = $GET['journal_day'];
+			$_SESSION['journal_day'] = $GET['journal_day'];
 		//}
 		?>
 	</span>
