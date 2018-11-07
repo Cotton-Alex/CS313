@@ -21,9 +21,9 @@
 	?>
 	<span>
 		<select name="journal_month" id="journal_month">
-			<option value="01" <?php if ($_SESSION['journal_month'] == "02") { echo ' selected';} ?> >January</option>
-			<option value="02" disabled>February</option>
-			<option value="03" disabled>March</option>
+			<option value="01" <?php if ($_SESSION['journal_month'] == "01") { echo ' selected';} ?> >January</option>
+			<option value="02" <?php if ($_SESSION['journal_month'] == "02") { echo ' selected';} ?> >February</option>
+			<option value="03" <?php if ($_SESSION['journal_month'] == "03") { echo ' selected';} ?> >March</option>
 			<option value="04" disabled>April</option>
 			<option value="05" disabled>May</option>
 			<option value="06" disabled>June</option>
@@ -37,23 +37,23 @@
 	</span>
 	<span>
 		<select name="journal_day" id="journal_day">
-			<option value="01" <?php if ($_SESSION['journal_day'] == "02") { echo ' selected';} ?> >1</option>
-			<option value="02" <?php if ($_SESSION['journal_day'] == "01") { echo ' selected';} ?> >2</option>
+			<option value="01" <?php if ($_SESSION['journal_day'] == "01") { echo ' selected';} ?> >1</option>
+			<option value="02" <?php if ($_SESSION['journal_day'] == "02") { echo ' selected';} ?> >2</option>
 			<option value="03" <?php if ($_SESSION['journal_day'] == "03") { echo ' selected';} ?> >3</option>
-			<option value="04">4</option>
-			<option value="05">5</option>
-			<option value="06">6</option>
-			<option value="07">7</option>
-			<option value="08">8</option>
-			<option value="09">9</option>
-			<option value="10">10</option>
-			<option value="11">11</option>
-			<option value="12">12</option>
-			<option value="13">13</option>
-			<option value="14">14</option>
-			<option value="15">15</option>
-			<option value="16">16</option>
-			<option value="17">17</option>
+			<option value="04" <?php if ($_SESSION['journal_day'] == "04") { echo ' selected';} ?> >4</option>
+			<option value="05" <?php if ($_SESSION['journal_day'] == "05") { echo ' selected';} ?> >5</option>
+			<option value="06" <?php if ($_SESSION['journal_day'] == "06") { echo ' selected';} ?> >6</option>
+			<option value="07" <?php if ($_SESSION['journal_day'] == "07") { echo ' selected';} ?> >7</option>
+			<option value="08" <?php if ($_SESSION['journal_day'] == "08") { echo ' selected';} ?> >8</option>
+			<option value="09" <?php if ($_SESSION['journal_day'] == "09") { echo ' selected';} ?> >9</option>
+			<option value="10" <?php if ($_SESSION['journal_day'] == "10") { echo ' selected';} ?> >10</option>
+			<option value="11" <?php if ($_SESSION['journal_day'] == "11") { echo ' selected';} ?> >11</option>
+			<option value="12" <?php if ($_SESSION['journal_day'] == "12") { echo ' selected';} ?> >12</option>
+			<option value="13" <?php if ($_SESSION['journal_day'] == "13") { echo ' selected';} ?> >13</option>
+			<option value="14" <?php if ($_SESSION['journal_day'] == "14") { echo ' selected';} ?> >14</option>
+			<option value="15" <?php if ($_SESSION['journal_day'] == "15") { echo ' selected';} ?> >15</option>
+			<option value="16" <?php if ($_SESSION['journal_day'] == "16") { echo ' selected';} ?> >16</option>
+			<option value="17" <?php if ($_SESSION['journal_day'] == "17") { echo ' selected';} ?> >17</option>
 			<option value="18" disabled>18</option>
 			<option value="19" disabled>19</option>
 			<option value="20" disabled>20</option>
@@ -73,8 +73,8 @@
 	<span>
 		<select name="journal_name" id="journal_name">
 			<option value="1946-1950" <?php if ($_SESSION['journal_name'] == "1946-1950") {echo ' selected';} ?> >1946-1950</option>
-			<option value="1951-1955" disabled>1951-1955</option>
-			<option value="1956-1960" disabled>1956-1960</option>
+			<option value="1951-1955" <?php if ($_SESSION['journal_name'] == "1951-1955") {echo ' selected';} ?> >1951-1955</option>
+			<option value="1956-1960" <?php if ($_SESSION['journal_name'] == "1956-1960") {echo ' selected';} ?> >1956-1960</option>
 			<option value="1961-1965" disabled>1961-1965</option>
 			<option value="1966-1968" disabled>1966-1968</option>
 			<option value="1969-1973" disabled>1969-1973</option>
