@@ -98,15 +98,15 @@
 	<span>
 		<input id="date_selector_go" type="submit" name="submit" value="Go">
 		<?php
-		if (isset($_POST['journal_name'])) {
-			$_SESSION['journal_name'] = $_POST['journal_name'];
-		}
-		if (isset($_POST['journal_month'])) {
-			$_SESSION['journal_month'] = $_POST['journal_month'];
-		}
-		if (isset($_POST['journal_day'])) {
-			$_SESSION['journal_day'] = $_POST['journal_day'];
-		}
+//		if (isset($_POST['journal_name'])) {
+//			$_SESSION['journal_name'] = $_POST['journal_name'];
+//		}
+//		if (isset($_POST['journal_month'])) {
+//			$_SESSION['journal_month'] = $_POST['journal_month'];
+//		}
+//		if (isset($_POST['journal_day'])) {
+//			$_SESSION['journal_day'] = $_POST['journal_day'];
+//		}
 		?>
 	</span>
 </form>
