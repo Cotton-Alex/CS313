@@ -2,6 +2,8 @@
 <!DOCTYPE html>
 <?php
 require("connect.php");
+require("date_selector.php");
+
 $journal_name = htmlspecialchars($_GET['journal_name']);
 $journal_month = htmlspecialchars($_GET['journal_month']);
 $journal_day = htmlspecialchars($_GET['journal_day']);
@@ -34,8 +36,7 @@ function add_entry($journal_id, $image_id, $entry_date, $entry_text) {
         <main>
             <div class="journal_page_container">
 
-				<?php require 'date_selector.php';
-				?>
+				
 
 				<?php
 //				foreach ($db->query("SELECT
