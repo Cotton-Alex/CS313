@@ -3,17 +3,19 @@
 <?php
 require('connect.php');
 
-	if (!isset($_SESSION['journal_month'])) {
-		$_SESSION['journal_month'] = "01";
-	}
-	if (!isset($_SESSION['journal_day'])) {
-		$_SESSION['journal_day'] = "01";
-	}
-	
-	//echo "get " . $_GET['journal_day'] . '<br>';
-	//echo "session " . $_SESSION['journal_day'] . '<br>';
+if (!isset($_SESSION['journal_name'])) {
+    $_SESSION['journal_name'] = "1946-1950";
+}
+if (!isset($_SESSION['journal_month'])) {
+    $_SESSION['journal_month'] = "01";
+}
+if (!isset($_SESSION['journal_day'])) {
+    $_SESSION['journal_day'] = "01";
+}
 
 
+//echo "get " . $_GET['journal_day'] . '<br>';
+//echo "session " . $_SESSION['journal_day'] . '<br>';
 //$query = 'SELECT journal_id, journal_name FROM journal';
 //$stmt = $db->prepare($query);
 //$stmt->execute();
@@ -27,18 +29,18 @@ require('connect.php');
 <html lang="en">
     <head>
         <title>Ruby's Journal | Home</title>
-		<?php require '../ruby/mod/head.php'; ?>
+<?php require '../ruby/mod/head.php'; ?>
     </head>
     <body>
         <header id="page_header">
-			<?php require '../ruby/mod/header.php'; ?>
+<?php require '../ruby/mod/header.php'; ?>
         </header>
         <main>
             <div id="journal_covers">
-				<?php
-				echo "get " . $_GET['journal_day'] . '<br>';
-				echo "session " . $_SESSION['journal_day'] . '<br>';
-				?>
+<?php
+echo "get " . $_GET['journal_day'] . '<br>';
+echo "session " . $_SESSION['journal_day'] . '<br>';
+?>
                 <!--Working Journal Covers-->
                 <figure> <a href="read.php?journal_month=<?php echo $_SESSION['journal_month'] ?>&journal_day=<?php echo $_SESSION['journal_day'] ?>&journal_name=1946-1950&submit=Go" name="1946-1950"><img src="http://www.rubysjournal.com/images/1946-1950-001-258x300.jpg" alt="Ruby's 1946-1950 journal" /> </a>
                     <figcaption>1946-1950</figcaption>
@@ -113,6 +115,6 @@ require('connect.php');
             </figure>-->
             </div>
         </main>
-		<?php require '../ruby/mod/footer.php'; ?>
+<?php require '../ruby/mod/footer.php'; ?>
     </body>
 </html>
