@@ -3,7 +3,7 @@
 $journal_name = htmlspecialchars($_GET['journal_name']);
 $journal_month = htmlspecialchars($_GET['journal_month']);
 $journal_day = htmlspecialchars($_GET['journal_day']);
-$journal_file_name = ($journal_name . '-' . $journal_month . '-' . $journal_day . '-' . '.jpg');
+$journal_file_name = ($journal_name . '-' . $journal_month . '-' . $journal_day . '.jpg');
 echo $journal_file_name;
 ?>
 <html lang="en">
