@@ -65,7 +65,7 @@ $journal_file_name = ($journal_name . '-' . $journal_month . '-' . $journal_day 
                                         ON entry.image_id = image.image_id
                                         INNER JOIN journal
                                         ON entry.journal_id = journal.journal_id
-                                        WHERE image.image.name =' . "'" . '1946-1950-01-05.jpg' . "'" . ';') as $row) {
+                                        WHERE image.image.name = ' . '' . $journal_file_name . '' . ';') as $row) {
 									echo '<tr>';
 									echo '<td id="tdDate">' . $row['entry_date'] . '</td>';
 									echo '<td>' . $row['entry_text'] . '</td>';
