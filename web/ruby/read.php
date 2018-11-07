@@ -4,7 +4,7 @@ require("connect.php");
 $journal_name = htmlspecialchars($_GET['journal_name']);
 $journal_month = htmlspecialchars($_GET['journal_month']);
 $journal_day = htmlspecialchars($_GET['journal_day']);
-$journal_file_name = ('' . $journal_name . '-' . $journal_month . '-' . $journal_day . '.jpg' . '');
+$journal_file_name = ($journal_name . '-' . $journal_month . '-' . $journal_day . '.jpg');
 ?>
 <html lang="en">
     <head>
@@ -65,7 +65,7 @@ $journal_file_name = ('' . $journal_name . '-' . $journal_month . '-' . $journal
                                         ON entry.image_id = image.image_id
                                         INNER JOIN journal
                                         ON entry.journal_id = journal.journal_id
-                                        WHERE image.image.name = ' . $journal_file_name . ';') as $row) {
+                                        WHERE image.image.name = ' . "'" . $journal_file_name. "'" . ';') as $row) {
 									echo '<tr>';
 									echo '<td id="tdDate">' . $row['entry_date'] . '</td>';
 									echo '<td>' . $row['entry_text'] . '</td>';
