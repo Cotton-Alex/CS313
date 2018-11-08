@@ -10,6 +10,11 @@ $entry_text = htmlspecialchars($_POST['entry_text']);
 echo "1234" . $journal_id;
 echo $entry_text;
 
+$date = "1998-08-14";
+$newdate = strtotime ( '+1 year' , strtotime ( $date ) ) ;
+$newdate = date ( 'Y-m-j' , $newdate );
+ 
+echo $newdate;
 
 //function add_entry($journal_id, $page_date, $image_id, $entry_date, $entry_text) {
 //    global $db;
