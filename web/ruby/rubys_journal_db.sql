@@ -81,5 +81,4 @@ VALUES
 (1, '1946-01-03', 3, '1947-01-03', 'Today it was so very cold we didn''t go to the city, went to Runts was 12 below Hennessey. Coldest in history here in many years. Uncle John''s house was burned.'),
 (1, '1946-01-03', 3, '1948-01-03', 'Today Better day today I ironed all day & way into the night but finished got pretty sor at Ray for not letting me where he was gone but O.K. now.'),
 (1, '1946-01-03', 3, '1949-01-03', 'Today good day 190.68. Very cold here & some snow. Very cold tonight. I didn'' make pies today. Kids started back to school.'),
-(1, '1946-01-03', 3, '1950-01-03', '(1950?)- Today no work at plant but I made my blue dress. The dark and light blue one. Real pretty.'),
-(2, '1951-01-01', 16, '1951-01-01', 'asdljkf asdasd fjasl kf  skjdfl ka');
+(1, '1946-01-03', 3, '1950-01-03', '(1950?)- Today no work at plant but I made my blue dress. The dark and light blue one. Real pretty.');

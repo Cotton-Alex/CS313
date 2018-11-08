@@ -27,7 +27,7 @@ ORDER BY entry.entry_id DESC
 LIMIT 1;
 
 UPDATE journal
-SET journal_name = '1998'
+SET journal_name = '1989'
 WHERE journal_id = 12;
 
 INSERT INTO entry (journal_id, page_date, image_id, entry_date, entry_text)
