@@ -26,7 +26,7 @@ VALUES
 
 CREATE TABLE image (
 	image_id serial primary key,
-        journal_name int references journal(journal_id),
+	journal_name int references journal(journal_id),
 	image_name varchar(45),
 	page_date date
 );
@@ -57,8 +57,7 @@ CREATE TABLE entry (
   page_date date,
   image_id int references image(image_id),
   entry_date date,
-  entry_text varchar(999)
-);
+  entry_text varchar(999));
 
 INSERT INTO entry (
 journal_id,
