@@ -60,7 +60,7 @@ $image_file_name = ($journal_name . '-' . $journal_month . '-' . $journal_day . 
                         <label class="labelDate">Date:</label>
                         <input class="inputDate" type="date" name="entry_date" value="" />
                         <br>
-                        <textarea class="transcribeTxtarea" name="entry_text" rows="5" cols="44" wrap="soft" style="overflow:auto">add entry here</textarea>
+                        <textarea class="transcribeTxtarea" name="entry_text" rows="5" cols="44" wrap="soft" style="overflow:auto"><?php echo substr($image_file_name, 0, 4);?></textarea>
                         <br>
 
                         <label>&nbsp;</label>
