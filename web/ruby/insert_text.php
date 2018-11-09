@@ -12,9 +12,9 @@ $entry_text = htmlspecialchars($_POST['entry_text']);
 //echo "$page_date\n";
 $date = $page_date;
 $newdate = strtotime ( '+1 year' , strtotime ( $date ) ) ;
-$newdate = date ( 'Y-m-j' , $newdate );
+$newdate2 = date ( 'Y-m-j' , $newdate );
  
-echo $newdate;
+echo $newdate2;
 
 //function add_entry($journal_id, $page_date, $image_id, $entry_date, $entry_text) {
 //    global $db;
