@@ -68,18 +68,25 @@ $image_file_name = ($journal_name . '-' . $journal_month . '-' . $journal_day . 
                                         INNER JOIN journal
                                         ON entry.journal_id = journal.journal_id
                                         WHERE image.image_name = ' . "'" . $image_file_name . "'" . ';') as $row) {
+									echo '<div id="journal_text">';
+									echo '<form method = "post" action = "insert_text.php">';
+									echo '<input type = "hidden" name = "journal_id" value = <?php echo $journal_id ?>">';
+									echo '<input type = "hidden" name = "page_date" value = "<?php echo $page_date ?>">';
+									echo '<input type = "hidden" name = "image_id" value = "<?php echo $image_id ?>">';
+									echo '<input type = "hidden" name = "entry_date" value = "<?php echo $entry_date ?>">';
 									echo '<tr>';
 									echo '<td id="tdDate">' . $row['entry_date'] . '</td>';
-//									echo '<td>' . $row['image.image_id'] . '</td>';
-//									echo '<td>' . $row['entry.page_date'] . '</td>';
-//									echo '<td>' . $row['entry_text'] . '</td>';
 									echo '<tr>';
-									//echo '<label class="labelDate">Date:</label>';
+									echo '<label class="labelDate">Date:</label>';
 									echo '<input class="inputDate" type="date" name="entry_date" value=' . $row['entry_date'] . ' />';
 									echo '<br>';
 									echo '<textarea class="transcribeTxtarea" name="entry_text" rows="5" cols="44" wrap="soft" style="overflow:auto">' . $row['entry_text'] . '</textarea>';
 									echo '<br>';
 									echo '<tr>';
+									echo '<input type="submit" value="Add Entry" />';
+									echo '<br>';
+									echo '</form>';
+									echo '</div>';
 								}
 								?>
 
@@ -112,5 +119,5 @@ $image_file_name = ($journal_name . '-' . $journal_month . '-' . $journal_day . 
     </body>
 	<?php
 //echo substr($image_file_name, 0, 4); 
-?>
+	?>
 </html>
