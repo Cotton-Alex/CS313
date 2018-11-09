@@ -48,7 +48,7 @@ $image_file_name = ($journal_name . '-' . $journal_month . '-' . $journal_day . 
 				echo '<br>';
 				echo '<img id = "journal_page" src = "http://www.rubysjournal.com/single_images/' . $image_file_name . '" alt = RubysJournal" />';
 				?>
-                <div id="journal_text">
+                <div> //id="journal_text">
                     <h3>Add Journal Entry</h3>
                     <section>
                         <table>
@@ -70,7 +70,7 @@ $image_file_name = ($journal_name . '-' . $journal_month . '-' . $journal_day . 
                                         WHERE image.image_name = ' . "'" . $image_file_name . "'" . ';') as $row) {
 									echo '<tr>';
 									echo '<td id="tdDate">' . $row['entry_date'] . '</td>';
-//									echo '<td>' . $row['entry_text'] . '</td>';
+									echo '<td>' . $row['entry_text'] . '</td>';
 //									echo '<td>' . $row['journal_name'] . '</td>';
 //									echo '<td>' . $row['image_name'] . '</td>';
 //									echo '<td>' . $row['page_date'] . '</td>';
