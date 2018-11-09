@@ -45,7 +45,7 @@ $image_file_name = ($journal_name . '-' . $journal_month . '-' . $journal_day . 
                                         ON entry.image_id = image.image_id
                                         INNER JOIN journal
                                         ON entry.journal_id = journal.journal_id
-                                        WHERE image.image_name = ' . "'" . $image_file_name . "'" . ';') as $row) {
+                                        WHERE image.image_name = ' . "'" . $image_file_name . "'" . ' ORDER BY entry_date ASC ;') as $row) {
 									echo '<tr>';
 									echo '<td id="tdDate">' . $row['entry_date'] . '</td>';
 									echo '<td>' . $row['entry_text'] . '</td>';
