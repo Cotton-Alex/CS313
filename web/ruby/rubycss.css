@@ -400,7 +400,7 @@ ul p {
     width: 450px;
     margin-left: 30px;
     margin-right: auto;
-	margin-bottom: 50px;
+	margin-bottom: 10px;
     padding: 0px;
     text-align: left;
 }
@@ -508,7 +508,8 @@ input {
     margin: 3px 10px 3px 0;
 }
 .addEntryButton {
-	margin-left: 20px;
+	margin-left: 81px;
+	height: 26px;
 }
 #dna, #related {
     float: left;	
@@ -526,7 +527,7 @@ input {
 	margin: 3px 0 3px 10px;
 }
 .inputDate {
-	margin: 3px 0 3px 0;
+	/*margin: 3px 0 3px 0;*/
 }
 
 input:focus, input:hover {

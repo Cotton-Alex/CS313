@@ -49,7 +49,7 @@ $image_file_name = ($journal_name . '-' . $journal_month . '-' . $journal_day . 
 				echo '<img id = "journal_page" src = "http://www.rubysjournal.com/single_images/' . $image_file_name . '" alt = RubysJournal" />';
 				?>
                 <div id="journal_text">
-                    <h3>Add Journal Entry</h3>
+                    <!--<h3>Add Journal Entry</h3>-->
                     <section>
                         <table>
                             <tbody>
@@ -81,7 +81,7 @@ $image_file_name = ($journal_name . '-' . $journal_month . '-' . $journal_day . 
 									echo '<input class="inputDate" type="date" name="entry_date" value=' . $row['entry_date'] . ' />';
 									echo '<input type="submit" value="Add Entry" class="addEntryButton"/>';
 									echo '<br>';
-									echo '<textarea class="transcribeTxtarea" name="entry_text" rows="5" cols="44" wrap="soft" style="overflow:auto">' . $row['entry_text'] . '</textarea>';
+									echo '<textarea class="transcribeTxtarea" name="entry_text" rows="4" cols="44" wrap="soft" style="overflow:auto">' . $row['entry_text'] . '</textarea>';
 									echo '<br>';
 									//echo '<tr>';
 									//echo '<input type="submit" value="Add Entry" class="addEntryButton"/>';
