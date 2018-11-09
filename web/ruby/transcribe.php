@@ -23,25 +23,25 @@ $image_file_name = ($journal_name . '-' . $journal_month . '-' . $journal_day . 
 				<?php require 'date_selector.php'; ?>
 
 				<?php
-//                foreach ($db->query('SELECT
-//                journal.journal_name,
-//                image.image_name,
-//                entry.page_date,
-//                entry.image_id,
-//                entry.entry_date,
-//                entry.entry_text
-//                FROM entry
-//                INNER JOIN image
-//                ON entry.image_id = image.image_id
-//                INNER JOIN journal
-//                ON entry.journal_id = journal.journal_id
-//                WHERE image.image_name = ' . "'" . $image_file_name . "'" . ';
-//                ') as $row) {
-//                    echo '<tr>';
-//                    echo '<td id = "tdDate">' . $row['entry_date'] . '</td>';
-//                    echo '<td>' . $row['entry_text'] . '</td>';
-//                    echo '<tr>';
-//                }
+                foreach ($db->query('SELECT
+                journal.journal_name,
+                image.image_name,
+                entry.page_date,
+                entry.image_id,
+                entry.entry_date,
+                entry.entry_text
+                FROM entry
+                INNER JOIN image
+                ON entry.image_id = image.image_id
+                INNER JOIN journal
+                ON entry.journal_id = journal.journal_id
+                WHERE image.image_name = ' . "'" . $image_file_name . "'" . ';
+                ') as $row) {
+					echo '<tr>';
+					echo '<td id = "tdDate">' . $row['entry_date'] . '</td>';
+					echo '<td>' . $row['entry_text'] . '</td>';
+					echo '<tr>';
+				}
 
 
 
