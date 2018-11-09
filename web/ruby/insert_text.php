@@ -26,7 +26,7 @@ $stmt->bindValue(':entry_text', $entry_text, PDO::PARAM_STR);
 $stmt->bindValue(':entry_date', $entry_date, PDO::PARAM_STR);
 $stmt->execute();
 
-$new_page = "read.php?journal_month=" . $_SESSION['journal_month'] . "&journal_day=" . $_SESSION['journal_day'] . "&journal_name=1946-1950&submit=Go";
+$new_page = "transcribe.php?journal_month=" . $_SESSION['journal_month'] . "&journal_day=" . $_SESSION['journal_day'] . "&journal_name=1946-1950&submit=Go";
 
 header("Location: $new_page");
 die();

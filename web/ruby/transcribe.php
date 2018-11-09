@@ -74,7 +74,7 @@ $image_file_name = ($journal_name . '-' . $journal_month . '-' . $journal_day . 
 									echo '<input type = "hidden" name = "journal_id" value = "' . $row['journal_id'] . '">';
 									echo '<input type = "hidden" name = "page_date" value = "' . $row['page_date'] . '">';
 									echo '<input type = "hidden" name = "image_id" value = "' . $row['image_id'] . '">';
-									echo '<input type = "hidden" name = "entry_date" value = "' . $row['entry_date'] . '">';
+									//echo '<input type = "hidden" name = "entry_date" value = "' . $row['entry_date'] . '">';
 									echo '<input type = "hidden" name = "image_name" value = "' . $row['image_name'] . '">';
 									//echo '<tr>';
 									//echo '<td id="tdDate">' . $row['entry_date'] . '</td>';
