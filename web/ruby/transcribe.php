@@ -70,13 +70,15 @@ $image_file_name = ($journal_name . '-' . $journal_month . '-' . $journal_day . 
                                         WHERE image.image_name = ' . "'" . $image_file_name . "'" . ';') as $row) {
 									echo '<tr>';
 									echo '<td id="tdDate">' . $row['entry_date'] . '</td>';
+									echo '<td>' . $row['image.image_id'] . '</td>';
+									echo '<td>' . $row['entry.page_date'] . '</td>';
 									echo '<td>' . $row['entry_text'] . '</td>';
-//									echo '<td>' . $row['journal_name'] . '</td>';
-//									echo '<td>' . $row['image_name'] . '</td>';
-//									echo '<td>' . $row['page_date'] . '</td>';
-//									echo '<td>' . $row['image_id'] . '</td>';
-//									echo '<td>' . $row['entry_date'] . '</td>';
-//									echo '<td>' . $row['entry_text'] . '</td>';
+									echo '<tr>';
+									echo '<label class="labelDate">Date:</label>';
+									echo '<input class="inputDate" type="date" name="entry_date" value=' . $row['entry_date'] . ' />';
+									echo '<br>';
+									echo '<textarea class="transcribeTxtarea" name="entry_text" rows="5" cols="44" wrap="soft" style="overflow:auto">' . $row['entry_text'] . '</textarea>';
+									echo '<br>';
 									echo '<tr>';
 								}
 								?>
@@ -94,9 +96,9 @@ $image_file_name = ($journal_name . '-' . $journal_month . '-' . $journal_day . 
                         <input type="hidden" name="entry_date" value="<?php echo $entry_date ?>">
                         <br>
                         <label class="labelDate">Date:</label>
-                        <input class="inputDate" type="date" name="entry_date" value="" />
+                        <input class="inputDate" type="date" name="entry_date" value='1946-01-01' />
                         <br>
-                        <textarea class="transcribeTxtarea" name="entry_text" rows="5" cols="44" wrap="soft" style="overflow:auto"><?php echo substr($image_file_name, 0, 4); ?></textarea>
+                        <textarea class="transcribeTxtarea" name="entry_text" rows="5" cols="44" wrap="soft" style="overflow:auto"></textarea>
                         <br>
 
                         <label>&nbsp;</label>
@@ -108,4 +110,7 @@ $image_file_name = ($journal_name . '-' . $journal_month . '-' . $journal_day . 
         </main>
 		<?php require '../ruby/mod/footer.php'; ?>
     </body>
+	<?php
+//echo substr($image_file_name, 0, 4); 
+?>
 </html>
