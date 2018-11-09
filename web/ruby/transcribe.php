@@ -71,7 +71,12 @@ $image_file_name = ($journal_name . '-' . $journal_month . '-' . $journal_day . 
                                     echo '<tr>';
                                     echo '<td id="tdDate">' . $row['entry_date'] . '</td>';
                                     echo '<td>' . $row['entry_text'] . '</td>';
-                                    echo '<td>' . $row['journal_name, image_name, page_date, image_id, entry_date, entry_text'] . '</td>';
+                                    echo '<td>' . $row['journal_name'] . '</td>';
+                                    echo '<td>' . $row['image_name'] . '</td>';
+                                    echo '<td>' . $row['page_date'] . '</td>';
+                                    echo '<td>' . $row['image_id'] . '</td>';
+                                    echo '<td>' . $row['entry_date'] . '</td>';
+                                    echo '<td>' . $row['entry_text'] . '</td>';
                                     echo '<tr>';
                                 }
                                 ?>
