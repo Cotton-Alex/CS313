@@ -9,7 +9,7 @@ $entry_text = htmlspecialchars($_POST['entry_text']);
 
 //echo "$journal_id\n";
 //echo "$entry_text\n";
-//echo "$page_date\n";
+echo "$page_date\n";
 $date = $page_date;
 $newdate = strtotime ( '+1 year' , strtotime ( $date ) ) ;
 $newdate2 = date ( 'Y-m-j' , $newdate );
