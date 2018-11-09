@@ -33,5 +33,5 @@ echo $newdate2;
 //}
 
 
-//include('transcribe.php');
+include('transcribe.php');
 ?>
