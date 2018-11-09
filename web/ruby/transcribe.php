@@ -59,6 +59,7 @@ $image_file_name = ($journal_name . '-' . $journal_month . '-' . $journal_day . 
 										journal.journal_id,
                                         journal.journal_name,
                                         image.image_name,
+										entry.entry_id,
                                         entry.page_date, 
                                         entry.image_id, 
                                         entry.entry_date, 
@@ -71,6 +72,7 @@ $image_file_name = ($journal_name . '-' . $journal_month . '-' . $journal_day . 
                                         WHERE image.image_name = ' . "'" . $image_file_name . "'" . ';') as $row) {
 									echo '<div id="journal_text">';
 									echo '<form method = "post" action = "insert_text.php">';
+									echo '<input type = "hidden" name = "entry_id" value = "' . $row['entry_id'] . '">';
 									echo '<input type = "hidden" name = "journal_id" value = "' . $row['journal_id'] . '">';
 									echo '<input type = "hidden" name = "page_date" value = "' . $row['page_date'] . '">';
 									echo '<input type = "hidden" name = "image_id" value = "' . $row['image_id'] . '">';
