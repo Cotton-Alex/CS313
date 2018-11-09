@@ -8,7 +8,6 @@
 //}
 //echo substr($image_file_name, 0, 4); 
 
-$entry_id = htmlspecialchars($_POST['entry_id']);
 $journal_id = htmlspecialchars($_POST['journal_id']);
 $page_date = htmlspecialchars($_POST['page_date']);
 $image_id = htmlspecialchars($_POST['image_id']);
@@ -22,8 +21,7 @@ $entry_text = htmlspecialchars($_POST['entry_text']);
 //echo "$entry_text\n";
 
 require('connect.php');
-$stmt = $db->prepare('UPDATE entry SET entry_text = :entry_text WHERE :entry_id = :entry_id');
-$stmt->bindValue(':entry_id', $entry_id, PDO::PARAM_STR);
+$stmt = $db->prepare('UPDATE entry SET entry_text = :entry_text WHERE entry_date = :entry_date');
 $stmt->bindValue(':entry_text', $entry_text, PDO::PARAM_STR);
 $stmt->bindValue(':entry_date', $entry_date, PDO::PARAM_STR);
 $stmt->execute();
