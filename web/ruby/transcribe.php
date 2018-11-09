@@ -79,11 +79,12 @@ $image_file_name = ($journal_name . '-' . $journal_month . '-' . $journal_day . 
 									//echo '<tr>';
 									echo '<label class="labelDate">Date:</label>';
 									echo '<input class="inputDate" type="date" name="entry_date" value=' . $row['entry_date'] . ' />';
+									echo '<input type="submit" value="Add Entry" class="addEntryButton"/>';
 									echo '<br>';
 									echo '<textarea class="transcribeTxtarea" name="entry_text" rows="5" cols="44" wrap="soft" style="overflow:auto">' . $row['entry_text'] . '</textarea>';
 									echo '<br>';
 									//echo '<tr>';
-									echo '<input type="submit" value="Add Entry" />';
+									//echo '<input type="submit" value="Add Entry" class="addEntryButton"/>';
 									//echo '<br>';
 									echo '</form>';
 									echo '</div>';

@@ -14,11 +14,17 @@ echo "$page_date\n";
 echo "$image_id\n";
 echo "$entry_date\n";
 echo "$entry_text\n";
-$date = $entry_date;
-$newdate = strtotime ( '+1 year' , strtotime ( $date ) ) ;
-$newdate = date ( 'Y-m-j' , $newdate );
- 
-echo $newdate;
+
+
+
+//THIS ADDS A YEAR TO THE DATE PASSED IN
+//$date = $entry_date;
+//$newdate = strtotime ( '+1 year' , strtotime ( $date ) ) ;
+//$newdate = date ( 'Y-m-j' , $newdate );
+//echo $newdate;
+
+
+
 
 //function add_entry($journal_id, $page_date, $image_id, $entry_date, $entry_text) {
 //    global $db;
