@@ -70,13 +70,13 @@ $image_file_name = ($journal_name . '-' . $journal_month . '-' . $journal_day . 
                                         WHERE image.image_name = ' . "'" . $image_file_name . "'" . ';') as $row) {
 									echo '<div id="journal_text">';
 									echo '<form method = "post" action = "insert_text.php">';
-									echo '<input type = "hidden" name = "journal_id" value = "<?php echo $journal_id ?>">';
-									echo '<input type = "hidden" name = "page_date" value = "<?php echo $page_date ?>">';
-									echo '<input type = "hidden" name = "image_id" value = "<?php echo $image_id ?>">';
-									echo '<input type = "hidden" name = "entry_date" value = "<?php echo $entry_date ?>">';
-									echo '<tr>';
-									echo '<td id="tdDate">' . $row['entry_date'] . '</td>';
-									echo '<tr>';
+									echo '<input type = "hidden" name = "journal_id" value = "<?php echo' . $journal_id . '?>">';
+									echo '<input type = "hidden" name = "page_date" value = "<?php echo' . $page_date . '?>">';
+									echo '<input type = "hidden" name = "image_id" value = "<?php echo' . $image_id . '?>">';
+									echo '<input type = "hidden" name = "entry_date" value = "<?php echo' . $entry_date . '?>">';
+									//echo '<tr>';
+									//echo '<td id="tdDate">' . $row['entry_date'] . '</td>';
+									//echo '<tr>';
 									echo '<label class="labelDate">Date:</label>';
 									echo '<input class="inputDate" type="date" name="entry_date" value=' . $row['entry_date'] . ' />';
 									echo '<br>';
