@@ -1,19 +1,28 @@
 <?php
 
-$journal_id = htmlspecialchars($_POST['journal_id']);
+if (isset(htmlspecialchars($_POST['journal_id']))) {
+    $journal_id = "1";
+} else {
+    $journal_id = htmlspecialchars($_POST['journal_id']);
+}
+
+
+//echo substr($image_file_name, 0, 4); 
+
+//$journal_id = htmlspecialchars($_POST['journal_id']);
 $page_date = htmlspecialchars($_POST['page_date']);
 $image_id = htmlspecialchars($_POST['image_id']);
 $entry_date = htmlspecialchars($_POST['entry_date']);
 $entry_text = htmlspecialchars($_POST['entry_text']);
+$image_name = htmlspecialchars($_POST['image_name']);
 
 
-//echo "$journal_id\n";
-//echo "$entry_text\n";
 echo "$journal_id\n";
 echo "$page_date\n";
 echo "$image_id\n";
 echo "$entry_date\n";
 echo "$entry_text\n";
+echo "$image_name\n";
 
 
 
