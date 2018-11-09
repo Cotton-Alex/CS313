@@ -14,7 +14,7 @@ echo "$page_date\n";
 echo "$image_id\n";
 echo "$entry_date\n";
 echo "$entry_text\n";
-$date = $page_date;
+$date = $entry_date;
 $newdate = strtotime ( '+1 year' , strtotime ( $date ) ) ;
 $newdate = date ( 'Y-m-j' , $newdate );
  
