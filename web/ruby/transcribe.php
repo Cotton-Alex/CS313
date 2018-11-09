@@ -56,7 +56,6 @@ $image_file_name = ($journal_name . '-' . $journal_month . '-' . $journal_day . 
 
 								<?php
 								foreach ($db->query('SELECT
-										journal.journal_id,
                                         journal.journal_name,
                                         image.image_name,
                                         entry.page_date, 
