@@ -48,7 +48,8 @@ $image_file_name = ($journal_name . '-' . $journal_month . '-' . $journal_day . 
 				echo '<br>';
 				echo '<img id = "journal_page" src = "http://www.rubysjournal.com/single_images/' . $image_file_name . '" alt = RubysJournal" />';
 				?>
-                <div id="journal_text">
+                <div> //id="journal_text"
+					
                     <h3>Add Journal Entry</h3>
                     <section>
                         <table>
@@ -96,6 +97,7 @@ $image_file_name = ($journal_name . '-' . $journal_month . '-' . $journal_day . 
                         <label class="labelDate">Date:</label>
                         <input class="inputDate" type="date" name="entry_date" value="" />
                         <br>
+						<input type="submit" value="Add Entry" />
                         <textarea class="transcribeTxtarea" name="entry_text" rows="5" cols="44" wrap="soft" style="overflow:auto"><?php echo substr($image_file_name, 0, 4); ?></textarea>
                         <br>
 
