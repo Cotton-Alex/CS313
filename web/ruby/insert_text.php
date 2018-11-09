@@ -9,16 +9,16 @@ $entry_text = htmlspecialchars($_POST['entry_text']);
 
 //echo "$journal_id\n";
 //echo "$entry_text\n";
-echo $journal_id;
-echo $page_date;
-echo $image_id;
-echo $entry_date;
-echo $entry_text;
-//$date = $page_date;
-//$newdate = strtotime ( '+1 year' , strtotime ( $date ) ) ;
-//$newdate2 = date ( 'Y-m-j' , $newdate );
-// 
-//echo $newdate2;
+echo "$journal_id\n";
+echo "$page_date\n";
+echo "$image_id\n";
+echo "$entry_date\n";
+echo "$entry_text\n";
+$date = $page_date;
+$newdate = strtotime ( '+1 year' , strtotime ( $date ) ) ;
+$newdate = date ( 'Y-m-j' , $newdate );
+ 
+echo $newdate;
 
 //function add_entry($journal_id, $page_date, $image_id, $entry_date, $entry_text) {
 //    global $db;
