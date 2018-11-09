@@ -11,19 +11,19 @@ $image_file_name = ($journal_name . '-' . $journal_month . '-' . $journal_day . 
 <html lang="en">
     <head>
         <title>Ruby's Journal | Home</title>
-		<?php require '../ruby/mod/head.php'; ?>
+        <?php require '../ruby/mod/head.php'; ?>
     </head>
     <body>
         <header id="page_header">
-			<?php require '../ruby/mod/header.php'; ?>
+            <?php require '../ruby/mod/header.php'; ?>
         </header>
         <main>
             <div class="journal_page_container">
 
-				<?php require 'date_selector.php'; ?>
+                <?php require 'date_selector.php'; ?>
 
-				<?php
-				foreach ($db->query('SELECT
+                <?php
+                foreach ($db->query('SELECT
                 journal.journal_name,
                 image.image_name,
                 entry.page_date,
@@ -37,18 +37,47 @@ $image_file_name = ($journal_name . '-' . $journal_month . '-' . $journal_day . 
                 ON entry.journal_id = journal.journal_id
                 WHERE image.image_name = ' . "'" . $image_file_name . "'" . ';
                 ') as $row) {
-					echo '<tr>';
-					echo '<td id = "tdDate">' . $row['entry_date'] . '</td>';
-					echo '<td>' . $row['entry_text'] . '</td>';
-					echo '<tr>';
-				}
+                    echo '<tr>';
+                    echo '<td id = "tdDate">' . $row['entry_date'] . '</td>';
+                    echo '<td>' . $row['entry_text'] . '</td>';
+                    echo '<tr>';
+                }
 
 
 
-				echo '<br>';
-				echo '<img id = "journal_page" src = "http://www.rubysjournal.com/single_images/' . $image_file_name . '" alt = RubysJournal" />';
-				?>
+                echo '<br>';
+                echo '<img id = "journal_page" src = "http://www.rubysjournal.com/single_images/' . $image_file_name . '" alt = RubysJournal" />';
+                ?>
+                <div id="journal_text">
+                    <section>
+                        <table>
+                            <tbody>
 
+                                <?php
+                                foreach ($db->query('SELECT
+                                        journal.journal_name,
+                                        image.image_name,
+                                        entry.page_date, 
+                                        entry.image_id, 
+                                        entry.entry_date, 
+                                        entry.entry_text
+                                        FROM entry
+                                        INNER JOIN image
+                                        ON entry.image_id = image.image_id
+                                        INNER JOIN journal
+                                        ON entry.journal_id = journal.journal_id
+                                        WHERE image.image_name = ' . "'" . $image_file_name . "'" . ';') as $row) {
+                                    echo '<tr>';
+                                    echo '<td id="tdDate">' . $row['entry_date'] . '</td>';
+                                    echo '<td>' . $row['entry_text'] . '</td>';
+                                    echo '<tr>';
+                                }
+                                ?>
+
+                            </tbody>
+                        </table>
+                    </section>
+                </div>
                 <div id="journal_text"> 
                     <h3>Add Journal Entry</h3>
                     <form method="post" action="insert_text.php">
@@ -60,7 +89,7 @@ $image_file_name = ($journal_name . '-' . $journal_month . '-' . $journal_day . 
                         <label class="labelDate">Date:</label>
                         <input class="inputDate" type="date" name="entry_date" value="" />
                         <br>
-                        <textarea class="transcribeTxtarea" name="entry_text" rows="5" cols="44" wrap="soft" style="overflow:auto"><?php echo substr($image_file_name, 0, 4);?></textarea>
+                        <textarea class="transcribeTxtarea" name="entry_text" rows="5" cols="44" wrap="soft" style="overflow:auto"><?php echo substr($image_file_name, 0, 4); ?></textarea>
                         <br>
 
                         <label>&nbsp;</label>
@@ -70,6 +99,6 @@ $image_file_name = ($journal_name . '-' . $journal_month . '-' . $journal_day . 
                 </div>
             </div>
         </main>
-		<?php require '../ruby/mod/footer.php'; ?>
+        <?php require '../ruby/mod/footer.php'; ?>
     </body>
 </html>
