@@ -23,25 +23,25 @@ $image_file_name = ($journal_name . '-' . $journal_month . '-' . $journal_day . 
                 <?php require 'date_selector.php'; ?>
 
                 <?php
-                foreach ($db->query('SELECT
-                journal.journal_name,
-                image.image_name,
-                entry.page_date,
-                entry.image_id,
-                entry.entry_date,
-                entry.entry_text
-                FROM entry
-                INNER JOIN image
-                ON entry.image_id = image.image_id
-                INNER JOIN journal
-                ON entry.journal_id = journal.journal_id
-                WHERE image.image_name = ' . "'" . $image_file_name . "'" . ';
-                ') as $row) {
-                    echo '<tr>';
-                    echo '<td id = "tdDate">' . $row['entry_date'] . '</td>';
-                    echo '<td>' . $row['entry_text'] . '</td>';
-                    echo '<tr>';
-                }
+//                foreach ($db->query('SELECT
+//                journal.journal_name,
+//                image.image_name,
+//                entry.page_date,
+//                entry.image_id,
+//                entry.entry_date,
+//                entry.entry_text
+//                FROM entry
+//                INNER JOIN image
+//                ON entry.image_id = image.image_id
+//                INNER JOIN journal
+//                ON entry.journal_id = journal.journal_id
+//                WHERE image.image_name = ' . "'" . $image_file_name . "'" . ';
+//                ') as $row) {
+//                    echo '<tr>';
+//                    echo '<td id = "tdDate">' . $row['entry_date'] . '</td>';
+//                    echo '<td>' . $row['entry_text'] . '</td>';
+//                    echo '<tr>';
+//                }
 
 
 
@@ -49,6 +49,7 @@ $image_file_name = ($journal_name . '-' . $journal_month . '-' . $journal_day . 
                 echo '<img id = "journal_page" src = "http://www.rubysjournal.com/single_images/' . $image_file_name . '" alt = RubysJournal" />';
                 ?>
                 <div id="journal_text">
+                    <h3>Add Journal Entry</h3>
                     <section>
                         <table>
                             <tbody>
@@ -70,6 +71,7 @@ $image_file_name = ($journal_name . '-' . $journal_month . '-' . $journal_day . 
                                     echo '<tr>';
                                     echo '<td id="tdDate">' . $row['entry_date'] . '</td>';
                                     echo '<td>' . $row['entry_text'] . '</td>';
+                                    echo '<td>' . $row['journal_name, image_name, page_date, image_id, entry_date, entry_text'] . '</td>';
                                     echo '<tr>';
                                 }
                                 ?>
@@ -79,7 +81,7 @@ $image_file_name = ($journal_name . '-' . $journal_month . '-' . $journal_day . 
                     </section>
                 </div>
                 <div id="journal_text"> 
-                    <h3>Add Journal Entry</h3>
+                    
                     <form method="post" action="insert_text.php">
                         <input type="hidden" name="journal_id" value="<?php echo $journal_id ?>">
                         <input type="hidden" name="page_date" value="<?php echo $page_date ?>">
